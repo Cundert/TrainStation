@@ -6,8 +6,10 @@ using UnityEngine;
 
 public class UserInteracting : FSMdecision
 {
+	public bool beingLooked;
 	public override bool Decide(FSMcontroller controller)
 	{
-		return Input.GetMouseButtonDown(0);
+		beingLooked = ObservedAvatar.instance.getAvatar() == controller.transform.gameObject;
+		return beingLooked && Input.GetMouseButtonDown(0);
 	}
 }

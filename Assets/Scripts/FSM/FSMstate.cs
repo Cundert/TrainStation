@@ -10,6 +10,8 @@ public class FSMstate : ScriptableObject
 	public bool isStayState;
 	// The state with isStayState==true, to indicate the controller that there's no transitions to be made.
 	public FSMstate stayState;
+	// Indicates if the avatar is being looked by the user.
+	public bool lookedByPlayer;
 
 	[Header ("Actions")]
 	// Array of Actions that take place when transitioning into this state.
