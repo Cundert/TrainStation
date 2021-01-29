@@ -18,7 +18,7 @@ public class AvatarDetector : MonoBehaviour
         Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
         if (Physics.Raycast(transform.position, forward, out hit))
         {
-            if (hit.collider.gameObject.layer.Equals(9))
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Person"))
             {
                 Debug.Log("Person");
             }
