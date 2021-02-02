@@ -9,6 +9,7 @@ public class AvatarDetector : MonoBehaviour
 
     public GameObject currentlyObservedAvatar;
     bool avatarBeingForgotten = false;
+    public float distanceOfAvatarDetection;
     // After two seconds, if the player hasn't seen a new avatar, the last one will be forgotten
     IEnumerator forgetAvatar()
     {
@@ -20,7 +21,7 @@ public class AvatarDetector : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 10 + transform.TransformDirection(Vector3.down);
+        Vector3 forward = transform.TransformDirection(Vector3.forward) * distanceOfAvatarDetection + transform.TransformDirection(Vector3.down);
         if (Physics.Raycast(transform.position, forward, out hit))
         {
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Person"))
