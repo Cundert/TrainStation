@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
-  m_Name: StopTalking
+  m_Name: StopListening
   m_EditorClassIdentifier: 
   decision: {fileID: 11400000, guid: 3dbe0b4012d8a7144ba33dd728875e2c, type: 2}
   destinationState: {fileID: 11400000, guid: 2b98a02c502f903468ea2ec4039d8c85, type: 2}

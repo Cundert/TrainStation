@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
-  m_Name: AnswerTicketMachine
+  m_Script: {fileID: 11500000, guid: 6a3f2bac07a52d74991a566a6b911c47, type: 3}
+  m_Name: AnimTriggerTalk
   m_EditorClassIdentifier: 
-  decision: {fileID: 11400000, guid: 81b7c376e23cbb44999283adb147f1d6, type: 2}
-  destinationState: {fileID: 11400000, guid: a81b1727dba795740b0270112661133a, type: 2}
+  condition: {fileID: 0}
+  triggerName: Talk
