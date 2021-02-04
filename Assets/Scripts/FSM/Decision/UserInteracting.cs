@@ -6,10 +6,16 @@ using UnityEngine;
 
 public class UserInteracting : FSMdecision
 {
-	public bool beingLooked;
+
 	public override bool Decide(FSMcontroller controller)
 	{
-		beingLooked = ObservedAvatar.instance.getAvatar() == controller.transform.gameObject;
-		return beingLooked && Input.GetMouseButtonDown(0);
+		bool beingLooked = ObservedAvatar.instance.getAvatar() == controller.transform.gameObject;
+		bool userGreeting = VoiceInteraction.instance.isGreetingSomeone();
+
+		if (beingLooked && userGreeting) { 
+			VoiceInteraction.instance.NotGreeting();
+			Debug.Log("Ha saludado" + userGreeting + "\n Me esta mirando"  + beingLooked );
+		}
+		return beingLooked && (Input.GetMouseButtonDown(0) || userGreeting);
 	}
 }
