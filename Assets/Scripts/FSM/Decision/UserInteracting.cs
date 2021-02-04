@@ -14,7 +14,6 @@ public class UserInteracting : FSMdecision
 
 		if (beingLooked && userGreeting) { 
 			VoiceInteraction.instance.NotGreeting();
-			Debug.Log("Ha saludado" + userGreeting + "\n Me esta mirando"  + beingLooked );
 		}
 		return beingLooked && (Input.GetMouseButtonDown(0) || userGreeting);
 	}

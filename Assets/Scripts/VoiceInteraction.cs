@@ -10,22 +10,23 @@ public class VoiceInteraction : MonoBehaviour
 
     private KeywordRecognizer kr;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
-    public bool userGreeting;
+    private bool userGreeting;
     private bool userSaysGoodbye;
 
+    public bool goBackToListening;
 
     void Start()
     {
         if (VoiceInteraction.instance) Destroy(this);
         VoiceInteraction.instance = this;
 
-        // Calling someone
+        // Greeting someone
         actions.Add("hola", Greeting);
         actions.Add("que tal", Greeting);
         actions.Add("hey", Greeting);
         actions.Add("perdona", Greeting);
 
-        //Farewell
+        // Saying goodbye
         actions.Add("adios", SayingGoodbye);
         actions.Add("hasta luego", SayingGoodbye);
 
