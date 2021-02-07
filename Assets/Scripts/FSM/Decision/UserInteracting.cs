@@ -9,10 +9,11 @@ public class UserInteracting : FSMdecision
 
 	public override bool Decide(FSMcontroller controller)
 	{
-		bool beingLooked = ObservedAvatar.instance.getAvatar() == controller.transform.gameObject;
+		bool beingLooked = AvatarDetector.instance.currentlyObservedAvatar == controller.transform.gameObject;
 		bool userGreeting = VoiceInteraction.instance.isGreetingSomeone();
 
-		if (beingLooked && userGreeting) { 
+		if (beingLooked && userGreeting) {
+			AvatarDetector.instance.currentlyInteractingAvatar = controller.transform.gameObject;
 			VoiceInteraction.instance.NotGreeting();
 		}
 		return beingLooked && (Input.GetMouseButtonDown(0) || userGreeting);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New AskingForTicketMachine", menuName = "FSM/Decision/AskingFor Ticket Machine")]
+[CreateAssetMenu(fileName = "New AskingForTicketMachine", menuName = "FSM/Decision/Asking For Ticket Machine")]
 
 public class AskingForTicketMachine : FSMdecision
 {

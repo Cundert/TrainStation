@@ -11,7 +11,6 @@ public class VoiceInteraction : MonoBehaviour
     private KeywordRecognizer kr;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
     private bool userGreeting;
-    private bool userSaysGoodbye;
 
     public bool goBackToListening;
 
@@ -26,14 +25,20 @@ public class VoiceInteraction : MonoBehaviour
         actions.Add("hey", Greeting);
         actions.Add("perdona", Greeting);
 
-        // Saying goodbye
-        actions.Add("adios", SayingGoodbye);
-        actions.Add("hasta luego", SayingGoodbye);
-
 
         kr = new KeywordRecognizer(actions.Keys.ToArray());
         kr.OnPhraseRecognized += RecognizedSpeech;
         kr.Start();
+    }
+
+    public void On()
+    {
+        kr.Start();
+    }
+
+    public void Off()
+    {
+        kr.Stop();
     }
 
     // Function called if a phrase has been recognized
@@ -50,15 +55,6 @@ public class VoiceInteraction : MonoBehaviour
     public void NotGreeting()
     {
         userGreeting = false;
-    }
-
-    private void SayingGoodbye()
-    {
-        userSaysGoodbye = true;
-    }
-    public void NotSayingGoobye()
-    {
-        userSaysGoodbye = false;
     }
 
     public bool isGreetingSomeone()
