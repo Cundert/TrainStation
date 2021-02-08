@@ -7,8 +7,19 @@ using UnityEngine;
 public class AwayFromPerson : FSMdecision
 {
 	public float distance;
+	public bool insideDistance;
+
 	public override bool Decide(FSMcontroller controller)
 	{
-		return Vector3.Distance(PlayerPosition.instance.position, controller.transform.position) > distance;
+		if (AvatarDetector.instance.currentlyInteractingAvatar != null)
+		{
+			float calculatedDistance = Vector3.Distance(PlayerPosition.instance.position,
+									AvatarDetector.instance.currentlyInteractingAvatar.transform.position);
+
+			if (insideDistance) return calculatedDistance < distance;
+
+			else return calculatedDistance >= distance;
+		}
+		else return false;
 	}
 }
