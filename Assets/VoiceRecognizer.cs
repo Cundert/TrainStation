@@ -6,6 +6,8 @@ public class VoiceRecognizer : MonoBehaviour
     private DictationRecognizer dictationRecognizer;
 
 	public static VoiceRecognizer instance;
+	private bool userGreeting;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -15,15 +17,28 @@ public class VoiceRecognizer : MonoBehaviour
 		dictationRecognizer = new DictationRecognizer();
 
         //dictationRecognizer.AutoSilenceTimeoutSeconds = 5;
-
         dictationRecognizer.DictationResult += DictationRecognizer_DictationResult;
 		dictationRecognizer.DictationComplete += DictationRecognizer_DictationComplete;
+		
+		On();
 	}
 	public void On()
     {
 		dictationRecognizer.Start();
     }
+	private void Greeting()
+	{
+		userGreeting = true;
+	}
+	public void NotGreeting()
+	{
+		userGreeting = false;
+	}
 
+	public bool isGreetingSomeone()
+	{
+		return userGreeting;
+	}
 	public void Off()
     {
 		dictationRecognizer.Stop();
@@ -32,6 +47,7 @@ public class VoiceRecognizer : MonoBehaviour
 	private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)   //aqui va todo lo que se maneje con resultado de voz... osea lo convertido a "texto"
 	{
 		dictationRecognizer.Start();
+		if (text.Contains("hola")) Greeting();
 		print(text + " " + confidence);
 	}
 
