@@ -9,6 +9,6 @@ public class ListenAgain : FSMdecision
 	// Start is called before the first frame update
 	public override bool Decide(FSMcontroller controller)
 	{
-		return VoiceInteraction.instance.goBackToListening;
+		return SentenceAnalyzer.instance.goBackToListening;
 	}
 }

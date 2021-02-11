@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Windows.Speech;
 
 public class VoiceRecognizer : MonoBehaviour
@@ -6,7 +7,7 @@ public class VoiceRecognizer : MonoBehaviour
     private DictationRecognizer dictationRecognizer;
 
 	public static VoiceRecognizer instance;
-	private bool userGreeting;
+	public bool startedAnalysis;
 
 	// Use this for initialization
 	void Start()
@@ -26,37 +27,29 @@ public class VoiceRecognizer : MonoBehaviour
     {
 		dictationRecognizer.Start();
     }
-	private void Greeting()
-	{
-		userGreeting = true;
-	}
-	public void NotGreeting()
-	{
-		userGreeting = false;
-	}
 
-	public bool isGreetingSomeone()
-	{
-		return userGreeting;
-	}
 	public void Off()
     {
 		dictationRecognizer.Stop();
     }
 
-	private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)   //aqui va todo lo que se maneje con resultado de voz... osea lo convertido a "texto"
+	private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)
 	{
 		dictationRecognizer.Start();
-		if (text.Contains("hola")) Greeting();
+
+		//if (confidence.Equals("High"))
+		//{
+			startedAnalysis = true;
+			SentenceAnalyzer.instance.Analyze(text);
+		//}
 		print(text + " " + confidence);
 	}
 
-
-	private void DictationRecognizer_DictationComplete(DictationCompletionCause cause)  //aqui va cuando ya todo haya acabado.. osea cuando dejes de hablar y pase el tiempo de reconocimiento
+    
+	private void DictationRecognizer_DictationComplete(DictationCompletionCause cause)
 	{
 		dictationRecognizer.Stop();
 		print("Recognizer stopped");
-		//PhraseRecognitionSystem.Restart();  //y esto sirve para reactivar el phrase.. osea para que nuestro script "voz" funcione a la normalidad... 
 	}
 
 	

@@ -9,6 +9,6 @@ public class ActivateGoBackToListening : FSMaction
     public bool negate;
     public override void Act(FSMcontroller controller)
     {
-        VoiceInteraction.instance.goBackToListening = !negate;
+        SentenceAnalyzer.instance.goBackToListening = !negate;
     }
 }
