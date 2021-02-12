@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ff0d53392c85644b9c926fdcd5de31, type: 3}
-  m_Name: 4
+  m_Script: {fileID: 11500000, guid: 402af236235cb0541aeb565707540339, type: 3}
+  m_Name: SayAlarmLocation
   m_EditorClassIdentifier: 
-  words:
-  - 4
-  - cuatro
-  - cuarta
+  condition: {fileID: 11400000, guid: b0546f1e8edf63b458c1b8dee179d528, type: 2}
+  sentenceToBeSaid: Las maquinas de tickets estan en la entrada de la estacion

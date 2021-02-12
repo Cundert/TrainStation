@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 402af236235cb0541aeb565707540339, type: 3}
-  m_Name: AnswerLocationOfTickets
+  m_Name: SayPlatform4Location
   m_EditorClassIdentifier: 
-  condition: {fileID: 11400000, guid: 771c42875a52b3d4d9d860865088dfd9, type: 2}
+  condition: {fileID: 11400000, guid: 58d09d9188a7ce84381273501380d2a1, type: 2}
+  sentenceToBeSaid: "Las andanas estan al fondo de la estaci\xF3n. La 4 es la cuarta
+    empezando desde la derecha."
