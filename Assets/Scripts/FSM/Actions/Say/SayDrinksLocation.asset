@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SayDrinksLocation
   m_EditorClassIdentifier: 
   condition: {fileID: 11400000, guid: a59497bd1b060db47a562f75e054b168, type: 2}
-  sentenceToBeSaid: La maquina de bebidas esta entre la andana y el puesto de informacion
+  sentence: 1

@@ -50,9 +50,10 @@ public class VoiceRecognizer : MonoBehaviour
 	{
 		dictationRecognizer.Stop();
 		print("Recognizer stopped");
+		dictationRecognizer.Start();
 	}
 
-	
+
 	void OnDestroy()
 	{
 		dictationRecognizer.DictationResult -= DictationRecognizer_DictationResult;

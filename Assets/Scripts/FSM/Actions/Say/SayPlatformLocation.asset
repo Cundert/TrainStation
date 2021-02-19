@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SayPlatformLocation
   m_EditorClassIdentifier: 
   condition: {fileID: 11400000, guid: a52f3f0df6794ba44a8aa0556ca32117, type: 2}
-  sentenceToBeSaid: "Las andanas estan al fondo de la estaci\xF3n."
+  sentence: 2

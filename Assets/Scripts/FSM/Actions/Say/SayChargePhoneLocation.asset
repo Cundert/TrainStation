@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: SayChargePhoneLocation
   m_EditorClassIdentifier: 
   condition: {fileID: 11400000, guid: b0eff1f6b47e0084381d4e2eb8eb213a, type: 2}
-  sentenceToBeSaid: "El puesto de carga de moviles esta en el lado derecho de la
-    estaci\xF3n."
+  sentence: 3
