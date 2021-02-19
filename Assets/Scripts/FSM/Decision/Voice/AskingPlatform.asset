@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff204aade70cff4bb1c0132ea9b11eb, type: 3}
   m_Name: AskingPlatform
   m_EditorClassIdentifier: 
-  d1: {fileID: 0}
-  d2: {fileID: 0}
+  d1: {fileID: 11400000, guid: c871a332a2862614abf0239e514be7d0, type: 2}
+  d2: {fileID: 11400000, guid: 555f7b38049045b48b5c87afdfe22d62, type: 2}

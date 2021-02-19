@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 402af236235cb0541aeb565707540339, type: 3}
-  m_Name: SayPlatform3Location
+  m_Name: SayPlatformLocation
   m_EditorClassIdentifier: 
-  condition: {fileID: 11400000, guid: 6ace2dbe26191bc4ea6d2437fb409ed2, type: 2}
-  sentenceToBeSaid: "Las andanas estan al fondo de la estaci\xF3n. La 3 es la tercera
-    empezando desde la derecha."
+  condition: {fileID: 11400000, guid: a52f3f0df6794ba44a8aa0556ca32117, type: 2}
+  sentenceToBeSaid: "Las andanas estan al fondo de la estaci\xF3n."

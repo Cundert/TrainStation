@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ff0d53392c85644b9c926fdcd5de31, type: 3}
   m_Name: Platform
   m_EditorClassIdentifier: 
-  words: []
+  words:
+  - "and\xE9n"
+  - plataforma
+  - andana
+  - antena
+  - andenes
+  - landana
