@@ -4,80 +4,84 @@ using UnityEngine;
 
 public class SetIKAutomatic : MonoBehaviour
 {
+    SA.FullBodyIKBehaviour fb;
     SA.FullBodyIK fbik;
-    public GameObject pelvis;
-    public GameObject spine;
-    public GameObject neck;
+    GameObject pelvis;
+    GameObject spine;
+    GameObject neck;
 
-    public GameObject LLeg;
-    public GameObject LKnee;
-    public GameObject LFoot;
+    GameObject LLeg;
+    GameObject LKnee;
+    GameObject LFoot;
 
-    public GameObject RLeg;
-    public GameObject RKnee;
-    public GameObject RFoot;
+    GameObject RLeg;
+    GameObject RKnee;
+    GameObject RFoot;
 
-    public GameObject LArm;
-    public GameObject LElbow;
-    public GameObject LWrist;
+    GameObject LArm;
+    GameObject LElbow;
+    GameObject LWrist;
 
-    public GameObject RArm;
-    public GameObject RElbow;
-    public GameObject RWrist;
+    GameObject RArm;
+    GameObject RElbow;
+    GameObject RWrist;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
     void Awake()
     {
+        //Debug.Log(InvertedKinematics.instance.activate);
+        //if (InvertedKinematics.instance.activate)
+        //{
 
-        fbik = GetComponent<SA.FullBodyIKBehaviour>().fullBodyIK;
+            fb = GetComponent<SA.FullBodyIKBehaviour>();
+            fbik = fb.fullBodyIK;
 
-        pelvis = transform.GetChild(0).GetChild(1).gameObject;
-        spine = pelvis.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
-        neck = spine.transform.GetChild(0).gameObject;
+            pelvis = transform.GetChild(0).GetChild(1).gameObject;
+            spine = pelvis.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
+            neck = spine.transform.GetChild(0).gameObject;
 
-        LLeg = pelvis.transform.GetChild(0).GetChild(0).gameObject;
-        LKnee = LLeg.transform.GetChild(0).gameObject;
-        LFoot = LKnee.transform.GetChild(0).gameObject;
+            LLeg = pelvis.transform.GetChild(0).GetChild(0).gameObject;
+            LKnee = LLeg.transform.GetChild(0).gameObject;
+            LFoot = LKnee.transform.GetChild(0).gameObject;
 
-        RLeg = pelvis.transform.GetChild(0).GetChild(1).gameObject;
-        RKnee = RLeg.transform.GetChild(0).gameObject;
-        RFoot = RKnee.transform.GetChild(0).gameObject;
+            RLeg = pelvis.transform.GetChild(0).GetChild(1).gameObject;
+            RKnee = RLeg.transform.GetChild(0).gameObject;
+            RFoot = RKnee.transform.GetChild(0).gameObject;
 
 
-        LArm = spine.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
-        LElbow = LArm.transform.GetChild(0).gameObject;
-        LWrist = LElbow.transform.GetChild(0).gameObject;
+            LArm = spine.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+            LElbow = LArm.transform.GetChild(0).gameObject;
+            LWrist = LElbow.transform.GetChild(0).gameObject;
 
-        RArm = spine.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
-        RElbow = RArm.transform.GetChild(0).gameObject;
-        RWrist = RElbow.transform.GetChild(0).gameObject;
+            RArm = spine.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
+            RElbow = RArm.transform.GetChild(0).gameObject;
+            RWrist = RElbow.transform.GetChild(0).gameObject;
 
-        ////////////////////////////////////////////////////////////////////////
-        
-        fbik.bodyBones.hips.transform = pelvis.transform;
-        fbik.bodyBones.spine.transform = spine.transform;
+            ////////////////////////////////////////////////////////////////////////
 
-        fbik.headBones.neck.transform = neck.transform;
+            fbik.bodyBones.hips.transform = pelvis.transform;
+            fbik.bodyBones.spine.transform = spine.transform;
 
-        fbik.leftLegBones.leg.transform = LLeg.transform;
-        fbik.leftLegBones.knee.transform = LKnee.transform;
-        fbik.leftLegBones.foot.transform = LFoot.transform;
+            fbik.headBones.neck.transform = neck.transform;
 
-        fbik.rightLegBones.leg.transform = RLeg.transform;
-        fbik.rightLegBones.knee.transform = RKnee.transform;
-        fbik.rightLegBones.foot.transform = RFoot.transform;
+            fbik.leftLegBones.leg.transform = LLeg.transform;
+            fbik.leftLegBones.knee.transform = LKnee.transform;
+            fbik.leftLegBones.foot.transform = LFoot.transform;
 
-        fbik.leftArmBones.arm.transform = LArm.transform;
-        fbik.leftArmBones.elbow.transform = LElbow.transform;
-        fbik.leftArmBones.wrist.transform = LWrist.transform;
+            fbik.rightLegBones.leg.transform = RLeg.transform;
+            fbik.rightLegBones.knee.transform = RKnee.transform;
+            fbik.rightLegBones.foot.transform = RFoot.transform;
 
-        fbik.rightArmBones.arm.transform = RArm.transform;
-        fbik.rightArmBones.elbow.transform = RElbow.transform;
-        fbik.rightArmBones.wrist.transform = RWrist.transform;
+            fbik.leftArmBones.arm.transform = LArm.transform;
+            fbik.leftArmBones.elbow.transform = LElbow.transform;
+            fbik.leftArmBones.wrist.transform = LWrist.transform;
+
+            fbik.rightArmBones.arm.transform = RArm.transform;
+            fbik.rightArmBones.elbow.transform = RElbow.transform;
+            fbik.rightArmBones.wrist.transform = RWrist.transform;
+
+            fb.enabled = false;
+
+        //}
     }
 }
