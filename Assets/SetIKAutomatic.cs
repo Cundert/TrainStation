@@ -29,59 +29,56 @@ public class SetIKAutomatic : MonoBehaviour
 
     void Awake()
     {
-        //Debug.Log(InvertedKinematics.instance.activate);
-        //if (InvertedKinematics.instance.activate)
-        //{
 
-            fb = GetComponent<SA.FullBodyIKBehaviour>();
-            fbik = fb.fullBodyIK;
+        fb = GetComponent<SA.FullBodyIKBehaviour>();
+        fbik = fb.fullBodyIK;
 
-            pelvis = transform.GetChild(0).GetChild(1).gameObject;
-            spine = pelvis.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
-            neck = spine.transform.GetChild(0).gameObject;
+        pelvis = transform.GetChild(0).GetChild(1).gameObject;
+        spine = pelvis.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
+        neck = spine.transform.GetChild(0).gameObject;
 
-            LLeg = pelvis.transform.GetChild(0).GetChild(0).gameObject;
-            LKnee = LLeg.transform.GetChild(0).gameObject;
-            LFoot = LKnee.transform.GetChild(0).gameObject;
+        LLeg = pelvis.transform.GetChild(0).GetChild(0).gameObject;
+        LKnee = LLeg.transform.GetChild(0).gameObject;
+        LFoot = LKnee.transform.GetChild(0).gameObject;
 
-            RLeg = pelvis.transform.GetChild(0).GetChild(1).gameObject;
-            RKnee = RLeg.transform.GetChild(0).gameObject;
-            RFoot = RKnee.transform.GetChild(0).gameObject;
+        RLeg = pelvis.transform.GetChild(0).GetChild(1).gameObject;
+        RKnee = RLeg.transform.GetChild(0).gameObject;
+        RFoot = RKnee.transform.GetChild(0).gameObject;
 
 
-            LArm = spine.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
-            LElbow = LArm.transform.GetChild(0).gameObject;
-            LWrist = LElbow.transform.GetChild(0).gameObject;
+        LArm = spine.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+        LElbow = LArm.transform.GetChild(0).gameObject;
+        LWrist = LElbow.transform.GetChild(0).gameObject;
 
-            RArm = spine.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
-            RElbow = RArm.transform.GetChild(0).gameObject;
-            RWrist = RElbow.transform.GetChild(0).gameObject;
+        RArm = spine.transform.GetChild(0).GetChild(2).GetChild(0).gameObject;
+        RElbow = RArm.transform.GetChild(0).gameObject;
+        RWrist = RElbow.transform.GetChild(0).gameObject;
 
-            ////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////
 
-            fbik.bodyBones.hips.transform = pelvis.transform;
-            fbik.bodyBones.spine.transform = spine.transform;
+        fbik.bodyBones.hips.transform = pelvis.transform;
+        fbik.bodyBones.spine.transform = spine.transform;
 
-            fbik.headBones.neck.transform = neck.transform;
+        fbik.headBones.neck.transform = neck.transform;
 
-            fbik.leftLegBones.leg.transform = LLeg.transform;
-            fbik.leftLegBones.knee.transform = LKnee.transform;
-            fbik.leftLegBones.foot.transform = LFoot.transform;
+        fbik.leftLegBones.leg.transform = LLeg.transform;
+        fbik.leftLegBones.knee.transform = LKnee.transform;
+        fbik.leftLegBones.foot.transform = LFoot.transform;
 
-            fbik.rightLegBones.leg.transform = RLeg.transform;
-            fbik.rightLegBones.knee.transform = RKnee.transform;
-            fbik.rightLegBones.foot.transform = RFoot.transform;
+        fbik.rightLegBones.leg.transform = RLeg.transform;
+        fbik.rightLegBones.knee.transform = RKnee.transform;
+        fbik.rightLegBones.foot.transform = RFoot.transform;
 
-            fbik.leftArmBones.arm.transform = LArm.transform;
-            fbik.leftArmBones.elbow.transform = LElbow.transform;
-            fbik.leftArmBones.wrist.transform = LWrist.transform;
+        fbik.leftArmBones.arm.transform = LArm.transform;
+        fbik.leftArmBones.elbow.transform = LElbow.transform;
+        fbik.leftArmBones.wrist.transform = LWrist.transform;
 
-            fbik.rightArmBones.arm.transform = RArm.transform;
-            fbik.rightArmBones.elbow.transform = RElbow.transform;
-            fbik.rightArmBones.wrist.transform = RWrist.transform;
+        fbik.rightArmBones.arm.transform = RArm.transform;
+        fbik.rightArmBones.elbow.transform = RElbow.transform;
+        fbik.rightArmBones.wrist.transform = RWrist.transform;
 
-            fb.enabled = false;
-
-        //}
+        fbik.headEffectors.neck.positionEnabled = true;
+        fbik.headEffectors.neck.pull = .9f;
+        fb.enabled = false;
     }
 }
