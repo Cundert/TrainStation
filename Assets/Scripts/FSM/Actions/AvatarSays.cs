@@ -11,7 +11,6 @@ public class AvatarSays : FSMaction
         if (condition.Decide(controller))
         {
             controller.GetComponent<Interaction>().AnswerQuestion(sentence);
-            Debug.Log(sentence);
         }
     }
 }
