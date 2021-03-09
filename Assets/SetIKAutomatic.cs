@@ -26,6 +26,14 @@ public class SetIKAutomatic : MonoBehaviour
     GameObject RElbow;
     GameObject RWrist;
 
+    GameObject Lindex0;
+    GameObject Lindex1;
+    GameObject Lindex2;
+
+    GameObject Lmid0;
+    GameObject Lmid1;
+    GameObject Lmid2;
+    static int count = 0;
 
     void Awake()
     {
@@ -54,6 +62,14 @@ public class SetIKAutomatic : MonoBehaviour
         RElbow = RArm.transform.GetChild(0).gameObject;
         RWrist = RElbow.transform.GetChild(0).gameObject;
 
+        Lindex0 = LWrist.transform.GetChild(1).gameObject;
+        Lindex1 = Lindex0.transform.GetChild(0).gameObject;
+        Lindex2 = Lindex1.transform.GetChild(0).gameObject;
+
+        Lmid0 = LWrist.transform.GetChild(2).gameObject;
+        Lmid1 = Lmid0.transform.GetChild(0).gameObject;
+        Lmid2 = Lmid1.transform.GetChild(0).gameObject;
+
         ////////////////////////////////////////////////////////////////////////
 
         fbik.bodyBones.hips.transform = pelvis.transform;
@@ -77,8 +93,17 @@ public class SetIKAutomatic : MonoBehaviour
         fbik.rightArmBones.elbow.transform = RElbow.transform;
         fbik.rightArmBones.wrist.transform = RWrist.transform;
 
+        fbik.leftHandFingersBones.index[0].transform = Lindex0.transform;
+        fbik.leftHandFingersBones.index[1].transform = Lindex1.transform;
+        fbik.leftHandFingersBones.index[2].transform = Lindex2.transform;
+
+        fbik.leftHandFingersBones.middle[0].transform = Lmid0.transform;
+        fbik.leftHandFingersBones.middle[1].transform = Lmid1.transform;
+        fbik.leftHandFingersBones.middle[2].transform = Lmid2.transform;
+
         fbik.headEffectors.neck.positionEnabled = true;
         fbik.headEffectors.neck.pull = .9f;
         fb.enabled = false;
+
     }
 }
