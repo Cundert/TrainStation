@@ -33,6 +33,18 @@ public class SetIKAutomatic : MonoBehaviour
     GameObject Lmid0;
     GameObject Lmid1;
     GameObject Lmid2;
+
+    GameObject Lthumb0;
+    GameObject Lthumb1;
+    GameObject Lthumb2;
+
+    GameObject Lring0;
+    GameObject Lring1;
+    GameObject Lring2;
+
+    GameObject Llittle0;
+    GameObject Llittle1;
+    GameObject Llittle2;
     static int count = 0;
 
     void Awake()
@@ -62,6 +74,12 @@ public class SetIKAutomatic : MonoBehaviour
         RElbow = RArm.transform.GetChild(0).gameObject;
         RWrist = RElbow.transform.GetChild(0).gameObject;
 
+        // Fingers
+
+        Lthumb0 = LWrist.transform.GetChild(0).gameObject;
+        Lthumb1 = Lthumb0.transform.GetChild(0).gameObject;
+        Lthumb2 = Lthumb1.transform.GetChild(0).gameObject;
+
         Lindex0 = LWrist.transform.GetChild(1).gameObject;
         Lindex1 = Lindex0.transform.GetChild(0).gameObject;
         Lindex2 = Lindex1.transform.GetChild(0).gameObject;
@@ -69,6 +87,14 @@ public class SetIKAutomatic : MonoBehaviour
         Lmid0 = LWrist.transform.GetChild(2).gameObject;
         Lmid1 = Lmid0.transform.GetChild(0).gameObject;
         Lmid2 = Lmid1.transform.GetChild(0).gameObject;
+
+        Lring0 = LWrist.transform.GetChild(3).gameObject;
+        Lring1 = Lring0.transform.GetChild(0).gameObject;
+        Lring2 = Lring1.transform.GetChild(0).gameObject;
+
+        Llittle0 = LWrist.transform.GetChild(4).gameObject;
+        Llittle1 = Llittle0.transform.GetChild(0).gameObject;
+        Llittle2 = Llittle1.transform.GetChild(0).gameObject;
 
         ////////////////////////////////////////////////////////////////////////
 
@@ -93,13 +119,32 @@ public class SetIKAutomatic : MonoBehaviour
         fbik.rightArmBones.elbow.transform = RElbow.transform;
         fbik.rightArmBones.wrist.transform = RWrist.transform;
 
+        //Fingers
+
+        fbik.leftHandFingersBones.thumb[0].transform = Lthumb0.transform;
+        fbik.leftHandFingersBones.thumb[1].transform = Lthumb1.transform;
+        fbik.leftHandFingersBones.thumb[2].transform = Lthumb2.transform;
+        fbik.leftHandFingersEffectors.thumb.positionEnabled = true;
+
         fbik.leftHandFingersBones.index[0].transform = Lindex0.transform;
         fbik.leftHandFingersBones.index[1].transform = Lindex1.transform;
         fbik.leftHandFingersBones.index[2].transform = Lindex2.transform;
+        fbik.leftHandFingersEffectors.index.positionEnabled = true;
 
         fbik.leftHandFingersBones.middle[0].transform = Lmid0.transform;
         fbik.leftHandFingersBones.middle[1].transform = Lmid1.transform;
         fbik.leftHandFingersBones.middle[2].transform = Lmid2.transform;
+        fbik.leftHandFingersEffectors.middle.positionEnabled = true;
+
+        fbik.leftHandFingersBones.ring[0].transform = Lring0.transform;
+        fbik.leftHandFingersBones.ring[1].transform = Lring1.transform;
+        fbik.leftHandFingersBones.ring[2].transform = Lring2.transform;
+        fbik.leftHandFingersEffectors.ring.positionEnabled = true;
+
+        fbik.leftHandFingersBones.little[0].transform = Llittle0.transform;
+        fbik.leftHandFingersBones.little[1].transform = Llittle1.transform;
+        fbik.leftHandFingersBones.little[2].transform = Llittle2.transform;
+        fbik.leftHandFingersEffectors.little.positionEnabled = true;
 
         fbik.headEffectors.neck.positionEnabled = true;
         fbik.headEffectors.neck.pull = .9f;
