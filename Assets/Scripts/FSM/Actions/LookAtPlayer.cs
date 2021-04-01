@@ -7,10 +7,12 @@ public class LookAtPlayer : FSMaction
 {
 	public override void Act(FSMcontroller controller)
 	{
-		Vector3 playerPosition = PlayerPosition.instance.position;
+		Vector3 lookAt = PlayerPosition.instance.position - controller.gameObject.transform.position;
 		AvatarDetector.instance.currentlyInteractingAvatar = controller.transform.gameObject;
 		// There could be a problem if the player isn't exactly in Y = 0.
-		playerPosition.y = 0.0f;
-		controller.transform.LookAt(playerPosition);
+
+		lookAt.y = 0.0f;
+		var rotation = Quaternion.LookRotation(lookAt);
+		controller.transform.rotation = rotation;
 	}
 }
