@@ -57,6 +57,39 @@ public class AvatarPointing : MonoBehaviour
 
 
     }
+    IEnumerator IdlePosition()
+    {
+        iniPositionRFoot = new Vector3(0.1169682f, -0.124f, -0.014534f);
+
+        Vector3 iniPositionLThumb = new Vector3(-0.585f, -0.746f, 0.407f);
+        Vector3 iniPositionLIndex = new Vector3(0.1176f, 0.0489f, 0.3291f);
+        Vector3 iniPositionLMiddle = new Vector3(-0.121f, -1.308f, -1.041f);
+        Vector3 iniPositionLRing = new Vector3(0.074f, -1.508f, -1.466f);
+        Vector3 iniPositionLLittle = new Vector3(-0.121f, -1.351f, -0.96f);
+
+        Vector3 iniPositionLHand = new Vector3(0.23f, 1.45f, 1.54f);
+
+        LHand.transform.position = gameObject.transform.position + transform.rotation * Vector3.left * izq + transform.rotation * Vector3.forward * forw + transform.rotation * Vector3.up * up;
+        RFoot.transform.position = gameObject.transform.position + transform.rotation * iniPositionRFoot;
+
+
+        LThumb.transform.position = LHand.transform.position + transform.rotation * iniPositionLThumb;
+        LIndex.transform.position = LHand.transform.position + transform.rotation * iniPositionLIndex;
+        LMiddle.transform.position = LHand.transform.position + transform.rotation * iniPositionLMiddle;
+        LRing.transform.position = LHand.transform.position + transform.rotation * iniPositionLRing;
+        LLittle.transform.position = LHand.transform.position + transform.rotation * iniPositionLLittle;
+
+        while (Vector3.Distance(LHand.transform.position, gameObject.transform.position + transform.rotation * iniPositionLHand) > 0.001)
+        {
+            LHand.transform.position= Vector3.Lerp(LHand.transform.position, gameObject.transform.position + transform.rotation * iniPositionLHand, 0.25f);
+            yield return new WaitForSeconds(0.01f);
+        }
+
+    }
+
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -72,8 +105,9 @@ public class AvatarPointing : MonoBehaviour
             Vector3 iniPositionLRing = new Vector3(0.074f, -1.508f, -1.466f);
             Vector3 iniPositionLLittle = new Vector3(-0.121f, -1.351f, -0.96f);
 
+            Vector3 iniPositionLHand = new Vector3(-0.24f, 1.45f, 0.63f);
 
-            LHand.transform.position = gameObject.transform.position + transform.rotation*Vector3.left * izq + transform.rotation * Vector3.forward * forw + transform.rotation * Vector3.up * up;
+            LHand.transform.position = gameObject.transform.position + transform.rotation * iniPositionLHand;
             RFoot.transform.position = gameObject.transform.position + transform.rotation * iniPositionRFoot;
 
 
