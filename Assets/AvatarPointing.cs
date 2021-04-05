@@ -61,6 +61,27 @@ public class AvatarPointing : MonoBehaviour
         iniPosition = new Vector3(-0.35f, 0.89f, 0);
         LHand.transform.position = gameObject.transform.position + transform.rotation * iniPosition;
     }
+    public void Point()
+    {
+        StartCoroutine(PointAnimation());
+
+
+    }
+    IEnumerator PointAnimation()
+    {
+        gameObject.GetComponent<SA.FullBodyIKBehaviour>().enabled = true;
+        StartCoroutine(PointingPosition());
+        yield return new WaitForSeconds(2);
+        StartCoroutine(RestingPosition());
+        yield return new WaitForSeconds(2);
+        gameObject.GetComponent<SA.FullBodyIKBehaviour>().enabled = false;
+
+    }
+    public void Rest()
+    {
+        StartCoroutine(RestingPosition());
+    }
+
     IEnumerator PointingPosition()
     {
         StopCoroutine(RestingPosition());

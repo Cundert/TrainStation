@@ -6,9 +6,11 @@ public class Interaction : MonoBehaviour
 {
     public AudioSource audioSource;
     bool isFemale;
+    public int lastLocation;
     // Start is called before the first frame update
     void Start()
     {
+        lastLocation = -1;
         audioSource = GetComponent<AudioSource>();
         isFemale = transform.name.Contains("F");
     }
@@ -25,5 +27,6 @@ public class Interaction : MonoBehaviour
             AudioClip ac = VoiceAnswers.instance.male[answer];
             audioSource.PlayOneShot(ac);
         }
+        lastLocation = answer;
     }
 }

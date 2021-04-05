@@ -38,6 +38,7 @@ public class SentenceAnalyzer : MonoBehaviour
     }
 	private void Greeting()
 	{
+		VoiceRecognizer.instance.startedAnalysis = false;
 		userGreeting = true;
 	}
 	public void NotGreeting()

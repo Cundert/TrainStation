@@ -16,4 +16,4 @@ MonoBehaviour:
   delayedActionHolder: {fileID: 1045302619742101758, guid: 6cd96359a58d4784ba61313265ebacc1,
     type: 3}
   actionToDelay: {fileID: 11400000, guid: d02baade8392343449bd84cb7033bc9c, type: 2}
-  timeToDelay: 3
+  timeToDelay: 8
