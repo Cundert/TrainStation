@@ -55,10 +55,16 @@ public class AvatarPointing : MonoBehaviour
         RRing = RHand.transform.GetChild(3).gameObject;
         RLittle = RHand.transform.GetChild(4).gameObject;
 
+        iniPositionR = new Vector3(0.35f, 0.89f, 0);
+        RHand.transform.position = gameObject.transform.position + transform.rotation * iniPositionR;
 
+        iniPosition = new Vector3(-0.35f, 0.89f, 0);
+        LHand.transform.position = gameObject.transform.position + transform.rotation * iniPosition;
     }
-    IEnumerator IdlePosition()
+    IEnumerator PointingPosition()
     {
+        StopCoroutine(RestingPosition());
+
         iniPositionRFoot = new Vector3(0.1169682f, -0.124f, -0.014534f);
 
         Vector3 iniPositionLThumb = new Vector3(-0.585f, -0.746f, 0.407f);
@@ -67,9 +73,9 @@ public class AvatarPointing : MonoBehaviour
         Vector3 iniPositionLRing = new Vector3(0.074f, -1.508f, -1.466f);
         Vector3 iniPositionLLittle = new Vector3(-0.121f, -1.351f, -0.96f);
 
-        Vector3 iniPositionLHand = new Vector3(0.23f, 1.45f, 1.54f);
+        Vector3 iniPositionLHand = new Vector3(-0.24f, 1.45f, 0.63f);
 
-        LHand.transform.position = gameObject.transform.position + transform.rotation * Vector3.left * izq + transform.rotation * Vector3.forward * forw + transform.rotation * Vector3.up * up;
+        //LHand.transform.position = gameObject.transform.position + transform.rotation * Vector3.left * izq + transform.rotation * Vector3.forward * forw + transform.rotation * Vector3.up * up;
         RFoot.transform.position = gameObject.transform.position + transform.rotation * iniPositionRFoot;
 
 
@@ -81,13 +87,43 @@ public class AvatarPointing : MonoBehaviour
 
         while (Vector3.Distance(LHand.transform.position, gameObject.transform.position + transform.rotation * iniPositionLHand) > 0.001)
         {
-            LHand.transform.position= Vector3.Lerp(LHand.transform.position, gameObject.transform.position + transform.rotation * iniPositionLHand, 0.25f);
+            LHand.transform.position= Vector3.Lerp(LHand.transform.position, gameObject.transform.position + transform.rotation * iniPositionLHand, 0.15f);
             yield return new WaitForSeconds(0.01f);
         }
-
+        yield return null;
     }
 
+    IEnumerator RestingPosition()
+    {
+        StopCoroutine(PointingPosition());
+        
+        iniPosition = new Vector3(-0.35f, 0.89f, 0);
+        iniPositionRFoot = new Vector3(0.1169682f, -0.021f, -0.014534f);
+        Vector3 iniPositionLThumb = new Vector3(-0.077f, -0.055f, 0.091f);
+        Vector3 iniPositionLIndex = new Vector3(-0.171f, -0.134f, 0.065f);
+        Vector3 iniPositionLMiddle = new Vector3(-0.183f, -0.151f, 0.045f);
+        Vector3 iniPositionLRing = new Vector3(-0.156f, -0.165f, 0.034f);
+        Vector3 iniPositionLLittle = new Vector3(-0.117f, -0.182f, 0.024f);
 
+        Vector3 iniPositionLHand = new Vector3(-0.35f, 0.89f, 0);
+
+
+        //LHand.transform.position = gameObject.transform.position + transform.rotation * iniPosition;
+        RFoot.transform.position = gameObject.transform.position + transform.rotation * iniPositionRFoot;
+
+        LThumb.transform.position = gameObject.transform.position + transform.rotation * iniPositionLThumb;
+        LIndex.transform.position = gameObject.transform.position + transform.rotation * iniPositionLIndex;
+        LMiddle.transform.position = gameObject.transform.position + transform.rotation * iniPositionLMiddle;
+        LRing.transform.position = gameObject.transform.position + transform.rotation * iniPositionLRing;
+        LLittle.transform.position = gameObject.transform.position + transform.rotation * iniPositionLLittle;
+
+        while (Vector3.Distance(LHand.transform.position, gameObject.transform.position + transform.rotation * iniPositionLHand) > 0.001)
+        {
+            LHand.transform.position = Vector3.Lerp(LHand.transform.position, gameObject.transform.position + transform.rotation * iniPositionLHand, 0.15f);
+            yield return new WaitForSeconds(0.01f);
+        }
+        yield return null;
+    }
 
 
 
@@ -97,47 +133,53 @@ public class AvatarPointing : MonoBehaviour
         //transform.Rotate(0, 10 * Time.deltaTime, 0);
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            iniPositionRFoot = new Vector3(0.1169682f, -0.124f, -0.014534f);
+            //iniPositionRFoot = new Vector3(0.1169682f, -0.124f, -0.014534f);
 
-            Vector3 iniPositionLThumb = new Vector3(-0.585f, -0.746f, 0.407f);
-            Vector3 iniPositionLIndex = new Vector3(0.1176f, 0.0489f, 0.3291f);
-            Vector3 iniPositionLMiddle = new Vector3(-0.121f, -1.308f, -1.041f);
-            Vector3 iniPositionLRing = new Vector3(0.074f, -1.508f, -1.466f);
-            Vector3 iniPositionLLittle = new Vector3(-0.121f, -1.351f, -0.96f);
+            //Vector3 iniPositionLThumb = new Vector3(-0.585f, -0.746f, 0.407f);
+            //Vector3 iniPositionLIndex = new Vector3(0.1176f, 0.0489f, 0.3291f);
+            //Vector3 iniPositionLMiddle = new Vector3(-0.121f, -1.308f, -1.041f);
+            //Vector3 iniPositionLRing = new Vector3(0.074f, -1.508f, -1.466f);
+            //Vector3 iniPositionLLittle = new Vector3(-0.121f, -1.351f, -0.96f);
 
-            Vector3 iniPositionLHand = new Vector3(-0.24f, 1.45f, 0.63f);
+            //Vector3 iniPositionLHand = new Vector3(-0.24f, 1.45f, 0.63f);
 
-            LHand.transform.position = gameObject.transform.position + transform.rotation * iniPositionLHand;
-            RFoot.transform.position = gameObject.transform.position + transform.rotation * iniPositionRFoot;
+            //LHand.transform.position = gameObject.transform.position + transform.rotation * iniPositionLHand;
+            //RFoot.transform.position = gameObject.transform.position + transform.rotation * iniPositionRFoot;
 
 
-            LThumb.transform.position = LHand.transform.position + transform.rotation * iniPositionLThumb;
-            LIndex.transform.position = LHand.transform.position + transform.rotation * iniPositionLIndex;
-            LMiddle.transform.position = LHand.transform.position + transform.rotation * iniPositionLMiddle;
-            LRing.transform.position = LHand.transform.position + transform.rotation * iniPositionLRing;
-            LLittle.transform.position = LHand.transform.position + transform.rotation * iniPositionLLittle;
+            //LThumb.transform.position = LHand.transform.position + transform.rotation * iniPositionLThumb;
+            //LIndex.transform.position = LHand.transform.position + transform.rotation * iniPositionLIndex;
+            //LMiddle.transform.position = LHand.transform.position + transform.rotation * iniPositionLMiddle;
+            //LRing.transform.position = LHand.transform.position + transform.rotation * iniPositionLRing;
+            //LLittle.transform.position = LHand.transform.position + transform.rotation * iniPositionLLittle;
+            StopCoroutine(RestingPosition());
+            StartCoroutine(PointingPosition());
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            iniPositionR =new Vector3(0.35f, 0.89f, 0);
-            iniPosition = new Vector3(-0.35f, 0.89f, 0);
-            iniPositionRFoot = new Vector3(0.1169682f, -0.021f, -0.014534f);
-            Vector3 iniPositionLThumb = new Vector3(-0.077f, -0.055f, 0.091f);
-            Vector3 iniPositionLIndex = new Vector3(-0.171f, -0.134f, 0.065f);
-            Vector3 iniPositionLMiddle = new Vector3(-0.183f, -0.151f, 0.045f);
-            Vector3 iniPositionLRing = new Vector3(-0.156f, -0.165f, 0.034f);
-            Vector3 iniPositionLLittle = new Vector3(-0.117f, -0.182f, 0.024f);
+            //iniPositionR =new Vector3(0.35f, 0.89f, 0);
+            //iniPosition = new Vector3(-0.35f, 0.89f, 0);
+            //iniPositionRFoot = new Vector3(0.1169682f, -0.021f, -0.014534f);
+            //Vector3 iniPositionLThumb = new Vector3(-0.077f, -0.055f, 0.091f);
+            //Vector3 iniPositionLIndex = new Vector3(-0.171f, -0.134f, 0.065f);
+            //Vector3 iniPositionLMiddle = new Vector3(-0.183f, -0.151f, 0.045f);
+            //Vector3 iniPositionLRing = new Vector3(-0.156f, -0.165f, 0.034f);
+            //Vector3 iniPositionLLittle = new Vector3(-0.117f, -0.182f, 0.024f);
 
 
-            LHand.transform.position = gameObject.transform.position + transform.rotation * iniPosition;
-            RHand.transform.position = gameObject.transform.position + transform.rotation * iniPositionR;
-            RFoot.transform.position = gameObject.transform.position + transform.rotation * iniPositionRFoot;
+            //LHand.transform.position = gameObject.transform.position + transform.rotation * iniPosition;
+            //RHand.transform.position = gameObject.transform.position + transform.rotation * iniPositionR;
+            //RFoot.transform.position = gameObject.transform.position + transform.rotation * iniPositionRFoot;
 
-            LThumb.transform.position = gameObject.transform.position + transform.rotation * iniPositionLThumb;
-            LIndex.transform.position = gameObject.transform.position + transform.rotation * iniPositionLIndex;
-            LMiddle.transform.position = gameObject.transform.position + transform.rotation * iniPositionLMiddle;
-            LRing.transform.position = gameObject.transform.position + transform.rotation * iniPositionLRing;
-            LLittle.transform.position = gameObject.transform.position + transform.rotation * iniPositionLLittle;
+            //LThumb.transform.position = gameObject.transform.position + transform.rotation * iniPositionLThumb;
+            //LIndex.transform.position = gameObject.transform.position + transform.rotation * iniPositionLIndex;
+            //LMiddle.transform.position = gameObject.transform.position + transform.rotation * iniPositionLMiddle;
+            //LRing.transform.position = gameObject.transform.position + transform.rotation * iniPositionLRing;
+            //LLittle.transform.position = gameObject.transform.position + transform.rotation * iniPositionLLittle;
+
+            StopCoroutine(PointingPosition());
+            StartCoroutine(RestingPosition());
+
 
         }
     }
