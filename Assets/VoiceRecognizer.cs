@@ -25,6 +25,7 @@ public class VoiceRecognizer : MonoBehaviour
 	}
 	public void On()
     {
+		print("Recognizer on");
 		dictationRecognizer.Start();
     }
 

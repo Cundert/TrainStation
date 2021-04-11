@@ -30,7 +30,13 @@ public class AvatarDetector : MonoBehaviour
         avatarBeingForgotten = false;
         yield return null;
     }
-
+    public void GreetAvatar()
+    {
+        if(currentlyObservedAvatar != null)
+        {
+            currentlyObservedAvatar.GetComponent<Interaction>().greeted = true;
+        }
+    }
     void FixedUpdate()
     {
         Vector3 forward = transform.TransformDirection(Vector3.forward) * distanceOfAvatarDetection + transform.TransformDirection(Vector3.down);
