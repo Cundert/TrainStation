@@ -21,24 +21,31 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Male_22_Body_BaseColor 1
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP _OCCLUSIONMAP
+  m_Shader: {fileID: 10512, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHABLEND_ON _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BaseMap:
+    - _AmbientOcclusionTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: a392ddc744fdec6478e400fb30e4ad48, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: fc89d065e54799747862703ede2eab7e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DepthMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -57,8 +64,28 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainTex:
+    - _GlossinessMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LookupDirect:
+        m_Texture: {fileID: 2800000, guid: ee7a7f61be8cb4f41bd6c6888fd1719f, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LookupDirectSM2:
+        m_Texture: {fileID: 2800000, guid: c82ac15d8e3571f44b48e20691d6fbf2, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LookupSH:
+        m_Texture: {fileID: 2800000, guid: 64d7e30d253aba54794616efab10bb94, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LookupSpecAO:
+        m_Texture: {fileID: 2800000, guid: 0978e19c24154c048a16e819aa87d3f1, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a392ddc744fdec6478e400fb30e4ad48, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -69,7 +96,19 @@ Material:
         m_Texture: {fileID: 2800000, guid: bee0a8d1e7e3e6e4b9d8dac93a67b570, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _PSSProfile:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SkinMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlosAOMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -77,34 +116,101 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecularMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TranslucencyMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _: 0
     - _AlphaClip: 0
+    - _AmbientOcclusionLightSuppression: 1
+    - _AmbientOcclusionScattering: 1
+    - _AmbientOcclusionStrength: 1
     - _Blend: 0
+    - _BlendOp: 0
     - _BumpScale: 1
+    - _CameraFadingEnabled: 0
+    - _CameraFarFadeDistance: 2
+    - _CameraNearFadeDistance: 1
+    - _ColorMode: 0
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
+    - _DistortionBlend: 0.5
+    - _DistortionEnabled: 0
+    - _DistortionStrength: 1
+    - _DistortionStrengthScaled: 0
+    - _DstBlend: 10
+    - _EmissionEnabled: 0
     - _EnvironmentReflections: 1
+    - _FlipbookBlending: 0
+    - _FlipbookMode: 0
     - _GlossMapScale: 0.253
     - _Glossiness: 0.5
+    - _GlossinessSource: 0
     - _GlossyReflections: 1
+    - _LightingEnabled: 0
     - _Metallic: 0
     - _Mode: 2
     - _OcclusionStrength: 1
+    - _PSSInternalExpanded: 0
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _ScatteringOffset: 0
+    - _ScatteringPower: 1
+    - _Shininess: 0
     - _Smoothness: 0.253
+    - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
+    - _SoftParticlesEnabled: 0
+    - _SoftParticlesFarFadeDistance: 1
+    - _SoftParticlesNearFadeDistance: 0
+    - _SpecBlur: 1
+    - _SpecEnvMapIntensity: 0.5
+    - _SpecGlossiness: 0.7
+    - _SpecIntensity: 0.028
+    - _SpecSource: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _Surface: 0
+    - _TranslucencyOffset: 0
+    - _TranslucencyPower: 1
+    - _TranslucencyRadius: 1
+    - _TranslucencyScale: 3
     - _UVSec: 0
     - _WorkflowMode: 1
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
+    - _BlurRange: {r: 0, g: 1, b: 0, a: 0}
+    - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _PSSProfileHigh_sqrtvar1234: {r: 0.08, g: 0.219, b: 0.432, a: 0.753}
+    - _PSSProfileHigh_transl123_sqrtvar5: {r: -225.421, g: -29.808, b: -7.715, a: 1.41}
+    - _PSSProfileHigh_transl456_sqrtvar6: {r: -2.544, g: -0.725, b: -0.195, a: 2.722}
+    - _PSSProfileHigh_weighths1_var1: {r: 0.234, g: 0.562, b: 0.644, a: 0.006}
+    - _PSSProfileHigh_weighths2_var2: {r: 0.101, g: 0.415, b: 0.341, a: 0.048}
+    - _PSSProfileHigh_weighths3_var3: {r: 0.113, g: 0.009, b: 0.007, a: 0.187}
+    - _PSSProfileHigh_weighths4_var4: {r: 0.113, g: 0.009, b: 0.007, a: 0.567}
+    - _PSSProfileHigh_weighths5_var5: {r: 0.359, g: 0.005, b: 0, a: 1.99}
+    - _PSSProfileHigh_weighths6_var6: {r: 0.078, g: 0, b: 0, a: 7.41}
+    - _PSSProfileLow_sqrtvar12: {r: 0.176, g: 1.548, b: 0, a: 0}
+    - _PSSProfileLow_transl: {r: -1.0387, g: -35.927, b: -55.504, a: 0}
+    - _PSSProfileLow_weighths1_var1: {r: 0.448, g: 0.986, b: 0.993, a: 0.031}
+    - _PSSProfileLow_weighths2_var2: {r: 0.552, g: 0.014, b: 0.007, a: 2.395}
+    - _PSSProfileMedium_sqrtvar123: {r: 0.152, g: 0.614, b: 1.714, a: 0}
+    - _PSSProfileMedium_transl123: {r: -62.441, g: -3.827, b: -0.491, a: 0}
+    - _PSSProfileMedium_weighths1_var1: {r: 0.335, g: 0.978, b: 0.986, a: 0.023}
+    - _PSSProfileMedium_weighths2_var2: {r: 0.227, g: 0.017, b: 0.014, a: 0.377}
+    - _PSSProfileMedium_weighths3_var3: {r: 0.438, g: 0.005, b: 0, a: 2.939}
+    - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _TranslucencyColor: {r: 1, g: 1, b: 1, a: 1}
