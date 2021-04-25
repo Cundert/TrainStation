@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b414d63a905ba254fa5043935afd7143, type: 3}
-  m_Name: FirstWaitingInteraction
+  m_Name: 2-FirstWaitingDestination
   m_EditorClassIdentifier: 
   isStayState: 0
   stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
-  onEnterActions: []
+  onEnterActions:
+  - {fileID: 0}
   constantActions: []
   transitions:
-  - {fileID: 11400000, guid: d0ae3ffc4fe6a2a4b87fa8c0f16d2729, type: 2}
-  - {fileID: 11400000, guid: 39d82f197ad3b164ca6600f39695d4e5, type: 2}
+  - {fileID: 11400000, guid: 4fea42b7bb0850a46a5841b4287c0725, type: 2}
