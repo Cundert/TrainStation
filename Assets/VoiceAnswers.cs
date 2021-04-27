@@ -9,6 +9,8 @@ public class VoiceAnswers : MonoBehaviour
     public AudioClip[] female;
     public AudioClip[] male;
 
+    public AudioClip[] wFemale;
+    public AudioClip[] wMale;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,7 @@ public class VoiceAnswers : MonoBehaviour
         if (VoiceAnswers.instance) Destroy(this);
         VoiceAnswers.instance = this;
     }
-
+    
     // Update is called once per frame
     void Update()
     {

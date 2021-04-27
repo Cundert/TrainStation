@@ -8,6 +8,7 @@ public class Interaction : MonoBehaviour
     bool isFemale;
     public int lastLocation;
     public bool greeted;
+    public GameObject ticket;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,10 @@ public class Interaction : MonoBehaviour
         isFemale = transform.name.Contains("F");
     }
 
-    
+    public void GiveTicket()
+    {
+        ticket.SetActive(true);
+    }
 
     public void AnswerQuestion(int answer) {
         if (isFemale)
@@ -31,5 +35,19 @@ public class Interaction : MonoBehaviour
             audioSource.PlayOneShot(ac);
         }
         lastLocation = answer;
+    }
+    public void WorkerSays(int sentence)
+    {
+        if (isFemale)
+        {
+            AudioClip ac = VoiceAnswers.instance.wFemale[sentence];
+            audioSource.PlayOneShot(ac);
+        }
+        else
+        {
+            AudioClip ac = VoiceAnswers.instance.wMale[sentence];
+            audioSource.PlayOneShot(ac);
+        }
+        lastLocation = sentence;
     }
 }
