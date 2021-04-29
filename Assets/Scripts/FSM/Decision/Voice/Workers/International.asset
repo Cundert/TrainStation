@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: International
   m_EditorClassIdentifier: 
   words:
-  - no
+  - "par\xEDs"
   - paris
