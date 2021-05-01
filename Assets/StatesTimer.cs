@@ -36,5 +36,6 @@ public class StatesTimer : MonoBehaviour
     public void StopTimer()
     {
         active = false;
+        timerFinished = false;
     }
 }

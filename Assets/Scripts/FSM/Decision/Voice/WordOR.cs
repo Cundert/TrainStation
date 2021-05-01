@@ -10,6 +10,7 @@ public class WordOR : FSMdecision
 	{
 		foreach (string word in words)
         {
+			if(SentenceAnalyzer.instance.sentence != null)
 			if (SentenceAnalyzer.instance.sentence.Contains(word)) return true;
         }
 		return false;

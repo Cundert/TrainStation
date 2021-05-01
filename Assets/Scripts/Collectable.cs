@@ -8,6 +8,7 @@ public class Collectable : Interactuable, IInteractable
 	public int flagID;
 	// Variable used to indicate a time value to destroy the ticket, to avoid leaving a floating item permanently
 	private float timeToDestroy;
+	
 
 	public void Interact() {
 		if (flagID>=0) TaskHandler.instance.flags[flagID]=true;
@@ -27,10 +28,10 @@ public class Collectable : Interactuable, IInteractable
 
 	protected override void Update() {
 		base.Update();
-		timeToDestroy-=Time.deltaTime;
-		if (timeToDestroy<=0.0f) {
-			transform.parent.gameObject.GetComponent<Dispenser>().MakeInteractuable();
-			Destroy(gameObject);
-		}
+		//timeToDestroy-=Time.deltaTime;
+		//if (timeToDestroy<=0.0f) {
+		//	transform.parent.gameObject.GetComponent<Dispenser>().MakeInteractuable();
+		//	Destroy(gameObject);
+		//}
 	}
 }
