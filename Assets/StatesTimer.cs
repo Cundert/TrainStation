@@ -38,4 +38,5 @@ public class StatesTimer : MonoBehaviour
         active = false;
         timerFinished = false;
     }
+    
 }
