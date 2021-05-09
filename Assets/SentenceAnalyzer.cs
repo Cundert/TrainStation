@@ -12,29 +12,33 @@ public class SentenceAnalyzer : MonoBehaviour
 
 	private bool userGreeting;
 	public string sentence;
-	bool forgetting;
 	public bool goBackToListening;
+	float timer = 1.5f;
 
 	void Start()
 	{
 		if (SentenceAnalyzer.instance) Destroy(this);
 		SentenceAnalyzer.instance = this;
 	}
-	IEnumerator forgetSentence()
+
+    private void Update()
     {
-		yield return new WaitForSeconds(1.5f);
-		if (forgetting) sentence = null;
-		forgetting = false;
-		yield return null;
-    }
-	public void Analyze(string textReceived)
+		if (timer > 0)
+		{
+			timer -= Time.deltaTime;
+			if (timer < 0)
+			{
+				sentence = null;
+			}
+		}
+	}
+    public void Analyze(string textReceived)
     {
-		StopAllCoroutines();
 		sentence = textReceived;
-		forgetting = true;
+
 		print("text received");
 		if (CheckPlayerGreeting(sentence)) Greeting(); 
-		StartCoroutine(forgetSentence());
+
     }
 	private void Greeting()
 	{
