@@ -6,14 +6,13 @@ public class AvatarDetector : MonoBehaviour
 {
     public static AvatarDetector instance;
 
-    RaycastHit hit;
-
-    public GameObject currentlyObservedAvatar;
     public GameObject currentlyInteractingAvatar;
 
-    public bool avatarBeingForgotten = false;
-    public float distanceOfAvatarDetection;
+    public GameObject currentlyObservedAvatar;
+    RaycastHit hit;
 
+    public float distanceOfAvatarDetection;
+    float timer;
 
     void Start()
     {
@@ -22,19 +21,23 @@ public class AvatarDetector : MonoBehaviour
     }
 
     // After two seconds, if the player hasn't seen a new avatar, the last one will be forgotten
-    IEnumerator forgetAvatar()
-    {
-        avatarBeingForgotten = true;
-        yield return  new WaitForSeconds(2);
-        if (avatarBeingForgotten) currentlyObservedAvatar = null;
-        avatarBeingForgotten = false;
-        yield return null;
-    }
+
     public void GreetAvatar()
     {
         if(currentlyObservedAvatar != null)
         {
             currentlyObservedAvatar.GetComponent<Interaction>().greeted = true;
+        }
+    }
+    private void Update()
+    {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                currentlyObservedAvatar = null;
+            }
         }
     }
     void FixedUpdate()
@@ -44,17 +47,9 @@ public class AvatarDetector : MonoBehaviour
         {
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Person"))
             {
-                StopAllCoroutines();
-                avatarBeingForgotten = false;
+                timer = 2;
                 currentlyObservedAvatar = hit.collider.gameObject;
-            }
-            else {
-                if (currentlyObservedAvatar != null && !avatarBeingForgotten)
-                {
-                    StopAllCoroutines();
-                    StartCoroutine(forgetAvatar());
-                }
-            }
+            }           
         }
         Debug.DrawRay(transform.position, forward, Color.green);
     }
