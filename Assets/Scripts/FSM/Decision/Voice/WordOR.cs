@@ -8,11 +8,15 @@ public class WordOR : FSMdecision
 	public string[] words;
 	public override bool Decide(FSMcontroller controller)
 	{
-		foreach (string word in words)
-        {
-			if(SentenceAnalyzer.instance.sentence != null)
-			if (SentenceAnalyzer.instance.sentence.Contains(word)) return true;
-        }
+		if (SentenceAnalyzer.instance.sentence != null)
+		{
+			string sentence = SentenceAnalyzer.instance.sentence;
+			foreach (string word in words)
+			{
+				if (sentence.Contains(word)) return true;
+			}
+
+		}
 		return false;
 	}
 }

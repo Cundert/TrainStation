@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New AvatarSays", menuName = "FSM/Action/Avatar Says")]
+
 public class AvatarSays : FSMaction
 {
     public int sentence;
     public override void Act(FSMcontroller controller)
     {
-        if (condition.Decide(controller))
+        if (VoiceRecognizer.instance.startedAnalysis)
         {
-            controller.GetComponent<Interaction>().AnswerQuestion(sentence);
+            if (condition.Decide(controller))
+            {
+                controller.GetComponent<Interaction>().AnswerQuestion(sentence);
+                VoiceRecognizer.instance.startedAnalysis = false;
+            }
         }
     }
 }

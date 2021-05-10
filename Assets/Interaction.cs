@@ -69,4 +69,17 @@ public class Interaction : MonoBehaviour
         }
         lastLocation = sentence;
     }
+
+
+    public void Say(AudioClip female, AudioClip male)
+    {
+        if (isFemale)
+        {
+            audioSource.PlayOneShot(female);
+        }
+        else
+        {
+            audioSource.PlayOneShot(male);
+        }
+    }
 }

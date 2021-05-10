@@ -12,6 +12,9 @@ public class VoiceAnswers : MonoBehaviour
     public AudioClip[] wFemale;
     public AudioClip[] wMale;
 
+    public AudioClip notUnderstoodFemale;
+    public AudioClip notUnderstoodMale;
+
     // Start is called before the first frame update
     void Start()
     {
