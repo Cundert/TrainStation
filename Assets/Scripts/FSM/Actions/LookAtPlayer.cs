@@ -13,6 +13,7 @@ public class LookAtPlayer : FSMaction
 
 		lookAt.y = 0.0f;
 		var rotation = Quaternion.LookRotation(lookAt);
-		controller.transform.rotation = rotation;
+		controller.GetComponent<Interaction>().startLookingAt(rotation);
+		//controller.transform.rotation = rotation;
 	}
 }

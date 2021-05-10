@@ -17,7 +17,26 @@ public class Interaction : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         isFemale = transform.name.Contains("F");
     }
+    public void startLookingAt(Quaternion q)
+    {
+        StartCoroutine("lookAtCoroutine",q);
+    }
 
+    IEnumerator lookAtCoroutine(Quaternion q)
+    {
+        float elapsedTime = 0;
+        float time = 0.65f;
+        Quaternion startingRotation = transform.rotation;
+        while (elapsedTime < time)
+        {
+            elapsedTime += Time.deltaTime; // <- move elapsedTime increment here
+
+            transform.rotation = Quaternion.Slerp(startingRotation, q, (elapsedTime / time));
+            yield return new WaitForEndOfFrame();
+        }
+
+        yield return null;
+    }
     public void GiveTicket()
     {
         ticket.SetActive(true);
