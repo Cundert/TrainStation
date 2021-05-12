@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SayPlatformLocation
   m_EditorClassIdentifier: 
   condition: {fileID: 11400000, guid: a52f3f0df6794ba44a8aa0556ca32117, type: 2}
-  sentence: 2
+  audioF: {fileID: 8300000, guid: 21dc011b01d585e4a94ad8575ee86958, type: 3}
+  audioM: {fileID: 8300000, guid: 3791e7f3284e1b544b3b95e4029aa33a, type: 3}

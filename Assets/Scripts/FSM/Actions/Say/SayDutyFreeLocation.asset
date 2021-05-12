@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SayDutyFreeLocation
   m_EditorClassIdentifier: 
   condition: {fileID: 11400000, guid: 187a813c304a27347a3266c25c2ee8a5, type: 2}
-  sentence: 4
+  audioF: {fileID: 8300000, guid: 37d23f6acde194c4ea49e75ce346daa2, type: 3}
+  audioM: {fileID: 8300000, guid: 71a943cdc70315744a3d4e9f082e9b24, type: 3}

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SayTicketLocation
   m_EditorClassIdentifier: 
   condition: {fileID: 11400000, guid: 771c42875a52b3d4d9d860865088dfd9, type: 2}
-  sentenceToBeSaid: Las maquinas de tickets estan en la entrada de la estacion.
+  audioF: {fileID: 8300000, guid: 691d396c8f7766e4ebd3acc10c13b669, type: 3}
+  audioM: {fileID: 8300000, guid: 88174e916ea56d04ea4fc59acd55e6f0, type: 3}
