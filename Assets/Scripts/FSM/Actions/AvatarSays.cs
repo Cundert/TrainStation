@@ -11,7 +11,7 @@ public class AvatarSays : FSMaction
     {
         if (VoiceRecognizer.instance.startedAnalysis)
         {
-            if (condition.Decide(controller))
+            if (condition == null || condition.Decide(controller))
             {
                 controller.GetComponent<Interaction>().Say(audioF, audioM);
                 VoiceRecognizer.instance.startedAnalysis = false;
