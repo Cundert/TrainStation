@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gate : MonoBehaviour
 {
-    public GameObject leftDoor, rightDoor, center;
+    public GameObject leftDoor, rightDoor, center, arrow, newArrowPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +27,13 @@ public class Gate : MonoBehaviour
 
    IEnumerator OpenDoor()
     {
+        center.transform.Rotate(new Vector3(0, 0, 180));
+
         if (PlayerPosition.instance.position.z > transform.position.z) //Open right door
         {
+            arrow.transform.Rotate(new Vector3(0, 0, 180));
+            arrow.transform.position = newArrowPos.transform.position;
+
             rightDoor.GetComponent<BoxCollider>().enabled = false;
 
             float iniDoorPos = rightDoor.transform.position.z;
