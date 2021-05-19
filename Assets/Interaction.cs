@@ -11,6 +11,10 @@ public class Interaction : MonoBehaviour
     public GameObject ticket;
     public FSMcontroller FSMgate;
 
+    public GameObject userRightHand;
+    public GameObject ticketSpawned;
+    public GameObject ticketToBeGiven;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +28,15 @@ public class Interaction : MonoBehaviour
         StartCoroutine("lookAtCoroutine",q);
     }
 
+    public void SpawnTicketInUserHand()
+    {
+        ticketSpawned = Instantiate(ticketToBeGiven, userRightHand.transform);
+        ticketSpawned.transform.position = userRightHand.transform.position;
+    }
+
     public void TicketValidated()
     {
-        FSMgate.customFlag = true;
+        FSMgate.customFlag = true; // El custom flag indica que  el ticket ha sido validado.
     }
 
     IEnumerator lookAtCoroutine(Quaternion q)
@@ -88,6 +98,14 @@ public class Interaction : MonoBehaviour
         else
         {
             audioSource.PlayOneShot(male);
+        }
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.name.Contains("SimpleTicket"))
+        {
+            GetComponent<FSMcontroller>().customFlag = true; // El custom flag indica que ha recibido el ticket.
+            Destroy(other.gameObject);
         }
     }
 }
