@@ -17,8 +17,9 @@ public class VoiceRecognizer : MonoBehaviour
 
 		dictationRecognizer = new DictationRecognizer();
 
-        //dictationRecognizer.AutoSilenceTimeoutSeconds = 5;
-        dictationRecognizer.DictationResult += DictationRecognizer_DictationResult;
+        dictationRecognizer.AutoSilenceTimeoutSeconds = 50;
+        
+		dictationRecognizer.DictationResult += DictationRecognizer_DictationResult;
 		dictationRecognizer.DictationComplete += DictationRecognizer_DictationComplete;
 		
 		On();

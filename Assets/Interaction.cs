@@ -9,6 +9,8 @@ public class Interaction : MonoBehaviour
     public int lastLocation;
     public bool greeted;
     public GameObject ticket;
+    public FSMcontroller FSMgate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,11 @@ public class Interaction : MonoBehaviour
     public void startLookingAt(Quaternion q)
     {
         StartCoroutine("lookAtCoroutine",q);
+    }
+
+    public void TicketValidated()
+    {
+        FSMgate.customFlag = true;
     }
 
     IEnumerator lookAtCoroutine(Quaternion q)
@@ -73,6 +80,7 @@ public class Interaction : MonoBehaviour
 
     public void Say(AudioClip female, AudioClip male)
     {
+        print("hi");
         if (isFemale)
         {
             audioSource.PlayOneShot(female);
