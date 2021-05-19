@@ -1,0 +1,40 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.IO;
+
+
+public class ManageCollectors : MonoBehaviour
+{
+    public static ManageCollectors instance;
+
+    string[] folders;
+    public int numberForCurrentIteration;
+    // Start is called before the first frame update
+    void Awake()
+    {
+        int highestDireNum = 0;
+
+        folders = Directory.GetDirectories("Assets/Data/");
+        foreach (string currentFolder in folders)
+        {
+            string num = currentFolder[currentFolder.Length - 1].ToString();
+
+            if (currentFolder[currentFolder.Length-2]!='/') // si el penultimo caracter es un numero, lo cogeremos tambien.
+            {
+                num = currentFolder[currentFolder.Length - 2].ToString() + num;
+                
+            }
+            int comparableNum = int.Parse(num);
+            if (highestDireNum < comparableNum) highestDireNum = comparableNum;
+        }
+        numberForCurrentIteration = highestDireNum + 1;
+        Directory.CreateDirectory("Assets/Data/"+ numberForCurrentIteration.ToString());
+    }
+
+    private void Start()
+    {
+        if (ManageCollectors.instance) Destroy(this);
+        ManageCollectors.instance = this;
+    }
+}
