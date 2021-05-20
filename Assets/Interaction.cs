@@ -90,7 +90,6 @@ public class Interaction : MonoBehaviour
 
     public void Say(AudioClip female, AudioClip male)
     {
-        print("hi");
         if (isFemale)
         {
             audioSource.PlayOneShot(female);

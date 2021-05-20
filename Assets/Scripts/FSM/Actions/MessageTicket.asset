@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MessageTicket
   m_EditorClassIdentifier: 
   condition: {fileID: 0}
-  message: Buy a ticket at a machine
+  message: Compra un ticket a Barcelona  y luego a Paris
   duration: 5

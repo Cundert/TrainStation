@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MessageDrink
   m_EditorClassIdentifier: 
   condition: {fileID: 0}
-  message: Buy a Coca-Cola
+  message: Valida tu ticket
   duration: 5
