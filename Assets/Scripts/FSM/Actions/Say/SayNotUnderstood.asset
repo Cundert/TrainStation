@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402af236235cb0541aeb565707540339, type: 3}
   m_Name: SayNotUnderstood
   m_EditorClassIdentifier: 
-  condition: {fileID: 0}
+  condition: {fileID: 11400000, guid: 017f223966487e84eb4f87809c6fc09b, type: 2}
   audioF: {fileID: 8300000, guid: 669b87600881324489ea3c5876290557, type: 3}
   audioM: {fileID: 8300000, guid: 89f21fcc491fffa4a8827787e3d82349, type: 3}
