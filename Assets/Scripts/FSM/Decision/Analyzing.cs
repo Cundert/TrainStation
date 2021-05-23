@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New AnalysisStarted", menuName = "FSM/Decision/Analysis Started")]
+[CreateAssetMenu(fileName = "New Analyzing", menuName = "FSM/Decision/Analyzing")]
 
-public class AnalysisStarted : FSMdecision
+public class Analyzing : FSMdecision
 {
 	public override bool Decide(FSMcontroller controller)
 	{
