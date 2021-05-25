@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402af236235cb0541aeb565707540339, type: 3}
   m_Name: AlgunaCiudadMas
   m_EditorClassIdentifier: 
-  condition: {fileID: 0}
+  condition: {fileID: 11400000, guid: 8a266a74798ff304ca01295f55a7702e, type: 2}
   audioF: {fileID: 8300000, guid: 2d5e0aa78863dd04eb47c4189bcba7c2, type: 3}
   audioM: {fileID: 8300000, guid: 9b03d3938afc5a0458ec40fad9ddd5cc, type: 3}

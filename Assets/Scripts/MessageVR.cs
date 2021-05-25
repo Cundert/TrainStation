@@ -34,7 +34,7 @@ public class MessageVR : MonoBehaviour
 		if (MessageVR.instance) Destroy(this);
 		MessageVR.instance=this;
 		t=GetComponentInChildren<TMP_Text>();
-		t.fontSize=72;
+		//t.fontSize=72;
 		timer=0;
 		printing=true;
     }
