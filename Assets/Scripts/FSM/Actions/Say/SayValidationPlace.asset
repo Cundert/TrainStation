@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 402af236235cb0541aeb565707540339, type: 3}
-  m_Name: New AvatarSays
+  m_Name: SayValidationPlace
   m_EditorClassIdentifier: 
-  condition: {fileID: 0}
-  audioF: {fileID: 0}
-  audioM: {fileID: 0}
+  condition: {fileID: 11400000, guid: d640fa0592919544eb9c714c038ebb6a, type: 2}
+  audioF: {fileID: 8300000, guid: 64043b84424f26a40afc528f4b79dc9a, type: 3}
+  audioM: {fileID: 8300000, guid: 14cb98c39c5a7fe4e9f50b06a189ab2b, type: 3}

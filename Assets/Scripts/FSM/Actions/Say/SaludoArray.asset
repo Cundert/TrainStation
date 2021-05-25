@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: SaludoArray
   m_EditorClassIdentifier: 
   condition: {fileID: 0}
-  audioF: []
-  audioM: []
+  audioF:
+  - {fileID: 8300000, guid: 0b6be0822f069f8449016db645c86d53, type: 3}
+  - {fileID: 8300000, guid: 7bf594a54befc8c4ba6f464165955e70, type: 3}
+  - {fileID: 8300000, guid: a01a859aa7fc516478a764666976dd25, type: 3}
+  audioM:
+  - {fileID: 8300000, guid: c3a00c9ef00499b4ca86d4bd82a40e72, type: 3}
+  - {fileID: 8300000, guid: b47dc8c3e3c45dc4ba3e0cbe90303c15, type: 3}
+  - {fileID: 8300000, guid: b47dc8c3e3c45dc4ba3e0cbe90303c15, type: 3}

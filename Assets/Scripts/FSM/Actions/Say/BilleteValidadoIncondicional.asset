@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc7e4e869bb803143b24a69ab59ac27f, type: 3}
-  m_Name: New SayWithNoConditionArray
+  m_Name: BilleteValidadoIncondicional
   m_EditorClassIdentifier: 
   condition: {fileID: 0}
-  audioF: []
-  audioM: []
+  audioF:
+  - {fileID: 8300000, guid: d3c288cd3449b1f4fade5fcad5cab0d8, type: 3}
+  audioM:
+  - {fileID: 8300000, guid: c5be5fe3da18c804ba92cc641c8c5a30, type: 3}

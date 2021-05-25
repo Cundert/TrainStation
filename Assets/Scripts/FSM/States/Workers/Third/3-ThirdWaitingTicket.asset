@@ -15,9 +15,9 @@ MonoBehaviour:
   isStayState: 0
   stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
   onEnterActions:
-  - {fileID: 11400000, guid: 10d0419270da86e46b156e12258de5e7, type: 2}
   - {fileID: 11400000, guid: 0c2e46dc463e05249b898f14e5b0edbd, type: 2}
   - {fileID: 11400000, guid: 082f8a43ed04ce94cb24d48ad9b83f6f, type: 2}
+  - {fileID: 11400000, guid: 10d0419270da86e46b156e12258de5e7, type: 2}
   constantActions: []
   transitions:
   - {fileID: 11400000, guid: a364020813ba6cc4eaa55ad2b2e7912b, type: 2}

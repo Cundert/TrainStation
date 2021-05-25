@@ -15,3 +15,7 @@ MonoBehaviour:
   words:
   - ticket
   - tickets
+  - "t\xEDquet"
+  - tiquet
+  - billete
+  - tarjeta
