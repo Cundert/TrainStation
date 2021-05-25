@@ -9,14 +9,14 @@ public class AvatarSays : FSMaction
     public AudioClip audioF, audioM;
     public override void Act(FSMcontroller controller)
     {
-        //if (VoiceRecognizer.instance.startedAnalysis)
-        //{
+        if (VoiceRecognizer.instance.startedAnalysis)
+        {
             if (condition == null || condition.Decide(controller))
             {
                 controller.GetComponent<Interaction>().Say(audioF, audioM);
                 VoiceRecognizer.instance.startedAnalysis = false;
             }
-        //}
+        }
     }
 }
 

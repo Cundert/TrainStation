@@ -42,7 +42,7 @@ public class SentenceAnalyzer : MonoBehaviour
     }
 	private void Greeting()
 	{
-		VoiceRecognizer.instance.startedAnalysis = false;
+		//VoiceRecognizer.instance.startedAnalysis = false;
 		//userGreeting = true;
 		AvatarDetector.instance.GreetAvatar();
 	}

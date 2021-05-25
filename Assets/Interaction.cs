@@ -99,6 +99,20 @@ public class Interaction : MonoBehaviour
             audioSource.PlayOneShot(male);
         }
     }
+
+    public void Say(AudioClip[] female, AudioClip[] male)
+    {
+        int random = Random.Range(0, female.Length);
+
+        if (isFemale)
+        {
+            audioSource.PlayOneShot(female[random]);
+        }
+        else
+        {
+            audioSource.PlayOneShot(male[random]);
+        }
+    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.name.Contains("SimpleTicket"))
