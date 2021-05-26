@@ -6,6 +6,7 @@ public class AudioPlayer : MonoBehaviour
 {
 	public static AudioPlayer instance;
 	public float repeatableWait;
+	public AudioClip[] anuncios;
 
 	void Start() {
 		if (AudioPlayer.instance) Destroy(this);
@@ -17,6 +18,7 @@ public class AudioPlayer : MonoBehaviour
 		AudioSource[] audios = GetComponents<AudioSource>();
 		yield return new WaitForSeconds(repeatableWait+audios[id].clip.length);
 		if (!StationAlarm.instance.alarmOn) {
+			audios[id].clip = anuncios[Random.Range(0, anuncios.Length)];
 			instance.PlayAudio(id, 0);
 			StartCoroutine(instance.PlayRepeatableAnnouncement(id));
 		}
