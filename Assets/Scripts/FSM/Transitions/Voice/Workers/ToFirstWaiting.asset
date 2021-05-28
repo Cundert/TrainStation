@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
   m_Name: ToFirstWaiting
   m_EditorClassIdentifier: 
-  decision: {fileID: 11400000, guid: 017f223966487e84eb4f87809c6fc09b, type: 2}
+  decision: {fileID: 11400000, guid: 148bb2c1ee0ed684da2d48c7adc6b405, type: 2}
   destinationState: {fileID: 11400000, guid: e87fb822dec500845989c280a54054b9, type: 2}

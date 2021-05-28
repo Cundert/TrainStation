@@ -7,6 +7,6 @@ public class GoodbyeAvatarData : FSMaction
 {
     public override void Act(FSMcontroller controller)
     {
-        AvatarFinishConversation.instance.WriteFinishData();
+        AvatarConversation.instance.ConversationFinished();
     }
 }

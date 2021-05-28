@@ -17,6 +17,6 @@ public class GreetedAvatarData : FSMaction
 
         float iniTime = Time.time;
 
-        AvatarIniConversation.instance.WriteIniData(female, worker, distance, iniTime);
+        AvatarConversation.instance.StoreIniData(female, worker, distance, iniTime);
     }
 }
