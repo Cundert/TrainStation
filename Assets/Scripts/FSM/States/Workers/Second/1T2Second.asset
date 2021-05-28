@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b414d63a905ba254fa5043935afd7143, type: 3}
-  m_Name: 3-SecondDaysBCN
+  m_Name: 1T2Second
   m_EditorClassIdentifier: 
   isStayState: 0
   stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
-  onEnterActions: []
+  onEnterActions:
+  - {fileID: 11400000, guid: 4bb1d67e3bb4e0a43971d02be2e3d1ba, type: 2}
+  - {fileID: 11400000, guid: 07e735db433fb084f99cadbf34526164, type: 2}
   constantActions: []
   transitions:
-  - {fileID: 11400000, guid: 1d86b3513b067fb409a663d8ce0bb338, type: 2}
+  - {fileID: 11400000, guid: ca6287d87c4467041990108578e01765, type: 2}

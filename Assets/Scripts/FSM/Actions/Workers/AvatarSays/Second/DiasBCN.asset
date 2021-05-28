@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402af236235cb0541aeb565707540339, type: 3}
   m_Name: DiasBCN
   m_EditorClassIdentifier: 
-  condition: {fileID: 0}
+  condition: {fileID: 11400000, guid: 6180aad074f15bc49b4e47c86162ce29, type: 2}
   audioF: {fileID: 8300000, guid: ae0253f6daf06ed45990872afbcae74a, type: 3}
   audioM: {fileID: 8300000, guid: 60c9370ff9140bd4ba433bfc03497ec6, type: 3}

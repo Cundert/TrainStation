@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
-  m_Name: ToSecondWaitingInteraction
+  m_Name: GoTo2First
   m_EditorClassIdentifier: 
   decision: {fileID: 11400000, guid: 148bb2c1ee0ed684da2d48c7adc6b405, type: 2}
-  destinationState: {fileID: 11400000, guid: 3b119bafe101c7a4ead930ee794c5a2f, type: 2}
+  destinationState: {fileID: 11400000, guid: c97b4351a24f4154696570344dd906c8, type: 2}

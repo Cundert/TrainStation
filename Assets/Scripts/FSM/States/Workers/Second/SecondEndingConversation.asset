@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b414d63a905ba254fa5043935afd7143, type: 3}
-  m_Name: 3-SecondDaysBCN
+  m_Name: SecondEndingConversation
   m_EditorClassIdentifier: 
   isStayState: 0
   stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
-  onEnterActions: []
+  onEnterActions:
+  - {fileID: 11400000, guid: 193d51c28d157af4bba423c4f4e0af56, type: 2}
   constantActions: []
   transitions:
-  - {fileID: 11400000, guid: 1d86b3513b067fb409a663d8ce0bb338, type: 2}
+  - {fileID: 11400000, guid: 54fc102352d353244bd3284754fda5c2, type: 2}

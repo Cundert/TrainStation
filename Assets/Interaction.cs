@@ -15,6 +15,8 @@ public class Interaction : MonoBehaviour
     public GameObject ticketSpawned;
     public GameObject ticketToBeGiven;
 
+    float greetedTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,20 @@ public class Interaction : MonoBehaviour
         lastLocation = -1;
         audioSource = GetComponent<AudioSource>();
         isFemale = transform.name.Contains("F");
+        greetedTimer = 1;
+    }
+
+    private void Update()
+    {
+        if (greeted)
+        {
+            greetedTimer -= Time.deltaTime;
+            if (greetedTimer <= 0)
+            {
+                greeted = false;
+                greetedTimer = 1;
+            }
+        }
     }
     public void startLookingAt(Quaternion q)
     {

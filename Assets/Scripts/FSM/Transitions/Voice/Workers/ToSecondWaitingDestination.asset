@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ToSecondWaitingDestination
   m_EditorClassIdentifier: 
   decision: {fileID: 11400000, guid: effa03f1a6c8f294492ffe0fda1d9470, type: 2}
-  destinationState: {fileID: 11400000, guid: ae04cbdde6fb0ec4d8839b69b86c6c40, type: 2}
+  destinationState: {fileID: 11400000, guid: 996a16ec1e1b41747842d40bb1208858, type: 2}
