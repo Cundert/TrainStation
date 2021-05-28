@@ -11,7 +11,7 @@ public class PlayerTrajectory : MonoBehaviour
     float timer;
     
     StreamWriter writer;
-    string path = "Assets/Data/";
+    string path;
 
     Vector2 lastPosition;
     Vector2 currentPosition;
@@ -20,13 +20,9 @@ public class PlayerTrajectory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastPosition = Vector2.zero;
-        currentPosition = Vector2.zero;
-        accumulatedDistance = 0;
-
-        int folderForCurrentIteration = ManageCollectors.instance.numberForCurrentIteration;
-        path += folderForCurrentIteration.ToString() + "/PlayerTrajectory.txt";
+        path =  ManageCollectors.instance.pathForCurrentIteration() + "/PlayerTrajectory.csv";
         timer = 0.5f;
+        writer = new StreamWriter(path, true);
     }
 
     // Update is called once per frame
@@ -41,15 +37,19 @@ public class PlayerTrajectory : MonoBehaviour
             string x = playerPos.position.x.ToString();
             string z = playerPos.position.z.ToString();
 
+            x = x.Replace(",", ".");
+            z = z.Replace(",", ".");
+
             currentPosition.x = float.Parse(x);
             currentPosition.y = float.Parse(z);
 
-            accumulatedDistance += Vector2.Distance(lastPosition, currentPosition);
-            lastPosition = currentPosition;
-
-            writer = new StreamWriter(path, true);
-            writer.Write(x + "\t" + z + "\t" + accumulatedDistance.ToString() + "\n");
-            writer.Close();
+            
+            writer.WriteLine(x + "," + z);
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        writer.Close();
     }
 }

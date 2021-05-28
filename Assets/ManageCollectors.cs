@@ -10,12 +10,13 @@ public class ManageCollectors : MonoBehaviour
 
     string[] folders;
     public int numberForCurrentIteration;
+    string iniPath = "Assets/Data/";
     // Start is called before the first frame update
     void Awake()
     {
         int highestDireNum = 0;
-
-        folders = Directory.GetDirectories("Assets/Data/");
+        
+        folders = Directory.GetDirectories(iniPath);
         foreach (string currentFolder in folders)
         {
             string num = currentFolder[currentFolder.Length - 1].ToString();
@@ -29,7 +30,13 @@ public class ManageCollectors : MonoBehaviour
             if (highestDireNum < comparableNum) highestDireNum = comparableNum;
         }
         numberForCurrentIteration = highestDireNum + 1;
-        Directory.CreateDirectory("Assets/Data/"+ numberForCurrentIteration.ToString());
+        Directory.CreateDirectory(iniPath+ numberForCurrentIteration.ToString());
+    }
+
+    public string pathForCurrentIteration()
+    {
+        string path = iniPath + numberForCurrentIteration.ToString();
+        return path;
     }
 
     private void Start()
