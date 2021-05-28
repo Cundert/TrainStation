@@ -17,6 +17,7 @@ public class SimulationTime : MonoBehaviour
     private void OnApplicationQuit()
     {
         writer = new StreamWriter(path, true);
+        writer.WriteLine("Simulation duration time");
         writer.WriteLine(Time.time.ToString().Replace(',', '.'));
         writer.Close();
     }

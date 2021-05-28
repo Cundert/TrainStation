@@ -21,8 +21,10 @@ public class PlayerTrajectory : MonoBehaviour
     void Start()
     {
         path =  ManageCollectors.instance.pathForCurrentIteration() + "/PlayerTrajectory.csv";
+
         timer = 0.5f;
         writer = new StreamWriter(path, true);
+        writer.WriteLine("x,z");
     }
 
     // Update is called once per frame
