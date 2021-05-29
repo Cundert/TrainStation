@@ -17,7 +17,6 @@ public class Interaction : MonoBehaviour
 
     float greetedTimer;
 
-    // Start is called before the first frame update
     void Start()
     {
         greeted = false;
@@ -38,6 +37,7 @@ public class Interaction : MonoBehaviour
                 greetedTimer = 1;
             }
         }
+        //userInWorkerArea = PlayerInWorkerArea();
     }
     public void startLookingAt(Quaternion q)
     {
