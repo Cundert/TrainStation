@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eeb7123878c76241ae9735ffefc7e83, type: 3}
+  m_Name: SayGoodbye
+  m_EditorClassIdentifier: 
+  condition: {fileID: 11400000, guid: 707a5da71ca86844e8744bbc6e62fb89, type: 2}
+  audioF:
+  - {fileID: 8300000, guid: 805c22a6f72511e46abd9763f8d6e8b8, type: 3}
+  - {fileID: 8300000, guid: 4e5d0f61cf54815428d49d87ad158786, type: 3}
+  - {fileID: 8300000, guid: 7c160f0bcb048e14ca2a71ccf6e97052, type: 3}
+  audioM:
+  - {fileID: 8300000, guid: be826547773f0d245ad9f9a6ae825a20, type: 3}
+  - {fileID: 8300000, guid: 6cd7a23ba7685d2499e05791bec83e4c, type: 3}
+  - {fileID: 8300000, guid: 5b258f434c5746641ac90a0b67451f4c, type: 3}

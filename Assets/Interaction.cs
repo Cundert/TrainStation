@@ -23,7 +23,7 @@ public class Interaction : MonoBehaviour
         lastLocation = -1;
         audioSource = GetComponent<AudioSource>();
         isFemale = transform.name.Contains("F");
-        greetedTimer = 1;
+        greetedTimer = 0.2f;
     }
 
     private void Update()
@@ -34,7 +34,7 @@ public class Interaction : MonoBehaviour
             if (greetedTimer <= 0)
             {
                 greeted = false;
-                greetedTimer = 1;
+                greetedTimer = 0.2f;
             }
         }
         //userInWorkerArea = PlayerInWorkerArea();
