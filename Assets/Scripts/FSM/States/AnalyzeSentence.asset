@@ -25,9 +25,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff41c00cb5b6b7e4a94e53fc847c9c0b, type: 2}
   - {fileID: 11400000, guid: b7ec71f788c398246bb7ece5683cfb33, type: 2}
   - {fileID: 11400000, guid: 1e22a569ce0d60143a17ae3b9b0e69d5, type: 2}
+  - {fileID: 11400000, guid: b08d173437bc5574da5d4386f1124828, type: 2}
   - {fileID: 11400000, guid: 8fe9cc2edb1507e429828d3ac509c271, type: 2}
   constantActions: []
   transitions:
   - {fileID: 11400000, guid: 50616d5892da9dc4e962ed657ad905e9, type: 2}
   - {fileID: 11400000, guid: dfef8d6c3b3443a4f898e936d64408cd, type: 2}
+  - {fileID: 11400000, guid: 8c9c2db1bba2603498ab54bd8194383b, type: 2}
   - {fileID: 11400000, guid: 082370699de7f894fb237fb3ed72550d, type: 2}
