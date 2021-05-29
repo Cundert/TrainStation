@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fb9e255c36dc842ac2e1dcece74a8c, type: 3}
   m_Name: AwayFromAvatar
   m_EditorClassIdentifier: 
-  distance: 6
+  distance: 3.25
   insideDistance: 0
