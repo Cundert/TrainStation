@@ -29,7 +29,7 @@ public class TriggersReset : MonoBehaviour
         if (timer <= 0)
         {
             ResetAllTriggers();
-            Destroy(this);
+            timer = 2;
         }
     }
 }

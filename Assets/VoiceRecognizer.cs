@@ -8,23 +8,37 @@ public class VoiceRecognizer : MonoBehaviour
 
 	public static VoiceRecognizer instance;
 	public bool startedAnalysis;
-
+	float timer;
 	// Use this for initialization
 	void Start()
 	{
+		timer = 15;
 		if (VoiceRecognizer.instance) Destroy(this);
 		VoiceRecognizer.instance = this;
 
 		dictationRecognizer = new DictationRecognizer();
 
         dictationRecognizer.AutoSilenceTimeoutSeconds = 50;
-        
+		dictationRecognizer.InitialSilenceTimeoutSeconds = 50;
 		dictationRecognizer.DictationResult += DictationRecognizer_DictationResult;
 		dictationRecognizer.DictationComplete += DictationRecognizer_DictationComplete;
 		
 		On();
 	}
-	public void On()
+    private void Update()
+    {
+		if (dictationRecognizer.Status.ToString() == "Stopped")
+		{
+			timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+				On();
+				timer = 15;
+            }
+		}
+		else timer = 15;
+    }
+    public void On()
     {
 		print("Recognizer on");
 		dictationRecognizer.Start();
@@ -39,11 +53,9 @@ public class VoiceRecognizer : MonoBehaviour
 	{
 		dictationRecognizer.Start();
 
-		//if (confidence.Equals("High"))
-		//{
-			startedAnalysis = true;
-			SentenceAnalyzer.instance.Analyze(text);
-		//}
+		startedAnalysis = true;
+		SentenceAnalyzer.instance.Analyze(text);
+
 		print(text + " " + confidence);
 	}
 
@@ -52,6 +64,7 @@ public class VoiceRecognizer : MonoBehaviour
 	{
 		dictationRecognizer.Stop();
 		print("Recognizer stopped");
+		print(cause);
 		dictationRecognizer.Start();
 	}
 

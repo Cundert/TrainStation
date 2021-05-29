@@ -4,39 +4,47 @@ using UnityEngine;
 
 public class StatesTimer : MonoBehaviour
 {
+    public static StatesTimer instance;
+
     public float timer;
     public bool active;
-    public bool timerFinished;
+    public float activeTimer;
 
     void Start()
     {
+        if (StatesTimer.instance) Destroy(this);
+        StatesTimer.instance = this;
+
+        timer = 0;
         active = false;
-        timerFinished = false;
+        activeTimer = 0;
     }
 
     void Update()
     {
-        if (active)
+        if (timer>=0)
         {
             timer -= Time.deltaTime;
 
             if (timer <= 0)
             {
+                active = true;
+                activeTimer= 1;
+            }
+        }
+
+        if (activeTimer >= 0)
+        {
+            activeTimer -= Time.deltaTime;
+            if (activeTimer <= 0)
+            {
                 active = false;
-                timerFinished = true;
             }
         }
     }
-    public void SetTimer(float time) {
-        timer = time;
-        timerFinished = false;
-        active = true;
-    }
-
-    public void StopTimer()
+    public void SetTimer(float time)
     {
         active = false;
-        timerFinished = false;
-    }
-    
+        timer = time;
+    }  
 }
