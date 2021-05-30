@@ -19,3 +19,4 @@ MonoBehaviour:
   constantActions: []
   transitions:
   - {fileID: 11400000, guid: a8e43739bb3c820409776da5adfcd0bb, type: 2}
+  - {fileID: 11400000, guid: 4352b511f242aa5499b7b757c2d6ba2a, type: 2}

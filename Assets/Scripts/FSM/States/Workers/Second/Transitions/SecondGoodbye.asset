@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ff0d53392c85644b9c926fdcd5de31, type: 3}
-  m_Name: Despidiendose
+  m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
+  m_Name: SecondGoodbye
   m_EditorClassIdentifier: 
-  words:
-  - adios
-  - vemos
-  - chao
-  - deu
-  - "adi\xF3s"
-  - gracias
+  decision: {fileID: 11400000, guid: 707a5da71ca86844e8744bbc6e62fb89, type: 2}
+  destinationState: {fileID: 11400000, guid: 3b119bafe101c7a4ead930ee794c5a2f, type: 2}

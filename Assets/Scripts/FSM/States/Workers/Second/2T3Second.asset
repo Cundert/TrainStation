@@ -17,8 +17,10 @@ MonoBehaviour:
   onEnterActions:
   - {fileID: 11400000, guid: 14d35e5b11e48f34397d6bb963c4d26a, type: 2}
   - {fileID: 11400000, guid: 0e4d0b3024e8c59468727eda13feee8f, type: 2}
+  - {fileID: 11400000, guid: b08d173437bc5574da5d4386f1124828, type: 2}
   - {fileID: 11400000, guid: 8fe9cc2edb1507e429828d3ac509c271, type: 2}
   constantActions: []
   transitions:
   - {fileID: 11400000, guid: 4eabe852093a900488cd155bfa1793a8, type: 2}
+  - {fileID: 11400000, guid: ca4b1bff88c6be74589fe281bf1710b0, type: 2}
   - {fileID: 11400000, guid: 0b718aaaf2d6d9e40842cc2cc3b2dcbd, type: 2}

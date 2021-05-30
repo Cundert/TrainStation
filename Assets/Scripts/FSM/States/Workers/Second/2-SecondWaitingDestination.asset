@@ -21,3 +21,4 @@ MonoBehaviour:
   constantActions: []
   transitions:
   - {fileID: 11400000, guid: d2dd4e8a21c80fa44b71a8f716e29b59, type: 2}
+  - {fileID: 11400000, guid: 4352b511f242aa5499b7b757c2d6ba2a, type: 2}
