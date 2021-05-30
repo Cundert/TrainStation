@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
   m_Name: Analyze2T3Zero
   m_EditorClassIdentifier: 
-  decision: {fileID: 0}
-  destinationState: {fileID: 0}
+  decision: {fileID: 11400000, guid: 017f223966487e84eb4f87809c6fc09b, type: 2}
+  destinationState: {fileID: 11400000, guid: 089f99d169bf96144aa78bd89ea9eedb, type: 2}

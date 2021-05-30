@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
   m_Name: BackTo2Zero
   m_EditorClassIdentifier: 
-  decision: {fileID: 0}
-  destinationState: {fileID: 0}
+  decision: {fileID: 11400000, guid: 148bb2c1ee0ed684da2d48c7adc6b405, type: 2}
+  destinationState: {fileID: 11400000, guid: 8d35634e59cb8b7428ac69d5a22e8f76, type: 2}
