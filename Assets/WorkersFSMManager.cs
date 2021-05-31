@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WorkersFSMManager : MonoBehaviour
 {
+    public static WorkersFSMManager instance;
+
     public GameObject[] workers;
     public bool[] assignedFSM;
 
@@ -19,6 +22,9 @@ public class WorkersFSMManager : MonoBehaviour
 
     void Start()
     {
+        if (WorkersFSMManager.instance) Destroy(this);
+        WorkersFSMManager.instance = this;
+
         completedInteractions = 0;
         assignedFSM = new bool[6];
     }
@@ -26,19 +32,68 @@ public class WorkersFSMManager : MonoBehaviour
     {
         
     }
-    void updateFSMs()
+    public void updateFSMs(float workerZCoord, int interactionNumber)
     {
-        completedInteractions++;
-        // modificar el array de booleanos como convenga a partir de un parametro de esta misma funcion
-        switch (completedInteractions) {
-            case 1:
-                AssignStateToUnusedWorkers(First1);
-            break;
-            case 2:
-                AssignStateToUnusedWorkers(Second1);
+        updateArrayOfBools(workerZCoord);        
+
+        switch (interactionNumber)
+        {
+            case 0:
+                firstInteraction = true;
                 break;
-            case 3:
-                AssignStateToUnusedWorkers(Zero1);
+            case 1:
+                secondInteraction = true;
+                break;
+            case 2:
+                thirdInteraction = true;
+                break;
+        }
+        
+        if (thirdInteraction)
+        {
+            AssignStateToUnusedWorkers(Zero1);
+
+        }
+        else if (secondInteraction)
+        {
+            AssignStateToUnusedWorkers(Second1);
+
+        }
+        else if (firstInteraction)
+        {
+            AssignStateToUnusedWorkers(First1);
+
+        }        
+    }
+
+    private void updateArrayOfBools(float workerZCoord)
+    {
+        switch (workerZCoord)
+        {
+            case -4.649f:
+                assignedFSM[0] = true;
+                break;
+
+            case -2.305f:
+                assignedFSM[1] = true;
+                break;
+
+            case 0.2f:
+                assignedFSM[2] = true;
+                break;
+
+            case 2.608f:
+                assignedFSM[3] = true;
+                break;
+
+            case 5.06f:
+                assignedFSM[4] = true;
+                break;
+
+            case 7.49f:
+                assignedFSM[5] = true;
+                break;
+            default:
                 break;
         }
     }
