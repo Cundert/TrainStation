@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ToThirdWaitingInteraction
   m_EditorClassIdentifier: 
   decision: {fileID: 11400000, guid: 017f223966487e84eb4f87809c6fc09b, type: 2}
-  destinationState: {fileID: 11400000, guid: e9faa78bf45ae234088c02c32377f8e7, type: 2}
+  destinationState: {fileID: 11400000, guid: faa99a1f4630dcb499e3045a8d637397, type: 2}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
-  m_Name: LeavingZero
+  m_Name: LeavingThird
   m_EditorClassIdentifier: 
   decision: {fileID: 11400000, guid: e4974444f101cee4284dc51dd8211c16, type: 2}
-  destinationState: {fileID: 11400000, guid: 64fc64e3d6655a243989716fd10abd63, type: 2}
+  destinationState: {fileID: 11400000, guid: faa99a1f4630dcb499e3045a8d637397, type: 2}
