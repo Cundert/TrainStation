@@ -14,6 +14,8 @@ public class ManageCollectors : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        if (ManageCollectors.instance) Destroy(this);
+        ManageCollectors.instance = this;
         int highestDireNum = 0;
         
         folders = Directory.GetDirectories(iniPath);
@@ -41,7 +43,6 @@ public class ManageCollectors : MonoBehaviour
 
     private void Start()
     {
-        if (ManageCollectors.instance) Destroy(this);
-        ManageCollectors.instance = this;
+        
     }
 }

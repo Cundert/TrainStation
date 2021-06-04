@@ -35,8 +35,10 @@ public class SentenceAnalyzer : MonoBehaviour
     public void Analyze(string textReceived)
     {
 		sentence = textReceived;
+		
+		if (ConversationText.instance) // ConvText might not be active
+			ConversationText.instance.StoreSentence(true, textReceived); 
 
-		print("text received");
 		if (CheckPlayerGreeting(sentence)) Greeting(); 
 
     }
