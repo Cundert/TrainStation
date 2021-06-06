@@ -8,7 +8,7 @@ public class Interaction : MonoBehaviour
     bool isFemale;
     public int lastLocation;
     public bool greeted;
-    public GameObject ticket;
+    public GameObject spawnableObject;
     public FSMcontroller FSMgate;
 
     public GameObject userRightHand;
@@ -72,7 +72,7 @@ public class Interaction : MonoBehaviour
     }
     public void GiveTicket()
     {
-        ticket.SetActive(true);
+        spawnableObject.SetActive(true);
     }
 
     public void AnswerQuestion(int answer) {
