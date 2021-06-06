@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 2T3Coffee
   m_EditorClassIdentifier: 
   isStayState: 0
-  stayState: {fileID: 0}
+  stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
   onEnterActions:
   - {fileID: 11400000, guid: abcb06a678b9d844d897210482d7453d, type: 2}
   - {fileID: 11400000, guid: b08d173437bc5574da5d4386f1124828, type: 2}
   - {fileID: 11400000, guid: 8fe9cc2edb1507e429828d3ac509c271, type: 2}
   constantActions: []
   transitions:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3c301ba52bc7e614aba5c5f008ce3df8, type: 2}
+  - {fileID: 11400000, guid: ce88fb46e63ea864ea75e11f40a28bec, type: 2}

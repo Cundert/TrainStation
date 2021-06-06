@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: 4-CoffeeAskingOrigin
   m_EditorClassIdentifier: 
   isStayState: 0
-  stayState: {fileID: 0}
-  onEnterActions: []
+  stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
+  onEnterActions:
+  - {fileID: 11400000, guid: 107c9233afb77fd499d4077ab92de805, type: 2}
   constantActions: []
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: d5e947834f851ef4db562842ef15b851, type: 2}
+  - {fileID: 11400000, guid: 66340248074d3f94c863f75a59d7cd95, type: 2}

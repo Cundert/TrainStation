@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1T2Coffee
   m_EditorClassIdentifier: 
   isStayState: 0
-  stayState: {fileID: 0}
+  stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
   onEnterActions: []
   constantActions:
   - {fileID: 11400000, guid: 01a9bb31ee10cbe4d80eadc8f12486ad, type: 2}

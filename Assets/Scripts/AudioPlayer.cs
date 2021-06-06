@@ -8,7 +8,7 @@ public class AudioPlayer : MonoBehaviour
 	public float repeatableWait;
 	public AudioClip[] anuncios;
 
-	void Start() {
+	void Awake() {
 		if (AudioPlayer.instance) Destroy(this);
 		AudioPlayer.instance=this;
 		StartCoroutine(instance.PlayRepeatableAnnouncement(1));

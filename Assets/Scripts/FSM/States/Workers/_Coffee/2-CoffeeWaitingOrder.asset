@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 2-CoffeeWaitingOrder
   m_EditorClassIdentifier: 
   isStayState: 0
-  stayState: {fileID: 0}
-  onEnterActions: []
+  stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
+  onEnterActions:
+  - {fileID: 11400000, guid: 10d0419270da86e46b156e12258de5e7, type: 2}
+  - {fileID: 11400000, guid: f8ba5c967bc30b142b06b3cf4d62f8f7, type: 2}
   constantActions: []
   transitions:
   - {fileID: 11400000, guid: c56d40b2763a2a74784a0e9eef3f0b54, type: 2}
