@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: AskingValidation
   m_EditorClassIdentifier: 
   words:
+  - validar
   - valida
   - acredita

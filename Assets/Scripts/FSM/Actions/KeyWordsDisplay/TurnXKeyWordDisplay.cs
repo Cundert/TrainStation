@@ -9,6 +9,6 @@ public class TurnXKeyWordDisplay : FSMaction
 	public bool negate;
 	public override void Act(FSMcontroller controller)
 	{
-		KeywordsBox.instance.TurnXKeyWordDisplay(negate);
+		KeywordsBox.instance.TurnXKeyWordDisplay(!negate);
 	}
 }

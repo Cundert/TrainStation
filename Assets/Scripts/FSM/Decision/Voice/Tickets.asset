@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Tickets
   m_EditorClassIdentifier: 
   words:
-  - ticket
+  - billete
   - tickets
   - "t\xEDquet"
   - tiquet
-  - billete
+  - ticket
   - tarjeta

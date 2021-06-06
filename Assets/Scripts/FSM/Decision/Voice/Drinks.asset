@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Drinks
   m_EditorClassIdentifier: 
   words:
+  - "caf\xE9"
   - bebida
   - bebidas
+  - cafe

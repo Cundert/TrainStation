@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402af236235cb0541aeb565707540339, type: 3}
   m_Name: SayDrinksLocation
   m_EditorClassIdentifier: 
-  condition: {fileID: 11400000, guid: a59497bd1b060db47a562f75e054b168, type: 2}
+  condition: {fileID: 11400000, guid: fa0165d6a7198b74f8ee1a981a330927, type: 2}
   audioF: {fileID: 8300000, guid: d4f360ee4c4ed2945aadb8086d7ad7b2, type: 3}
   audioM: {fileID: 8300000, guid: 3d013e75b2e35cf4399f37dd58aae627, type: 3}
