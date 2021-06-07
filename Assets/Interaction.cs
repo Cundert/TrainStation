@@ -6,16 +6,13 @@ public class Interaction : MonoBehaviour
 {
     public AudioSource audioSource;
     bool isFemale;
-    public int lastLocation;
     public bool greeted;
-    public GameObject spawnableObject;
 
     float greetedTimer;
 
     void Start()
     {
         greeted = false;
-        lastLocation = -1;
         audioSource = GetComponent<AudioSource>();
         isFemale = transform.name.Contains("F");
         greetedTimer = 0.2f;
@@ -55,10 +52,6 @@ public class Interaction : MonoBehaviour
 
         yield return null;
     }
-    public void GiveTicket()
-    {
-        spawnableObject.SetActive(true);
-    }
 
     public void AnswerQuestion(int answer) {
         if (isFemale)
@@ -71,7 +64,6 @@ public class Interaction : MonoBehaviour
             AudioClip ac = VoiceAnswers.instance.male[answer];
             audioSource.PlayOneShot(ac);
         }
-        lastLocation = answer;
     }
     public void WorkerSays(int sentence)
     {
@@ -85,7 +77,6 @@ public class Interaction : MonoBehaviour
             AudioClip ac = VoiceAnswers.instance.wMale[sentence];
             audioSource.PlayOneShot(ac);
         }
-        lastLocation = sentence;
     }
 
 

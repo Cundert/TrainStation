@@ -9,6 +9,6 @@ public class GiveTicket : FSMaction
     // Start is called before the first frame update
     public override void Act(FSMcontroller controller)
     {
-        controller.GetComponent<Interaction>().GiveTicket();
+        controller.GetComponent<TicketSeller>().GiveTicket();
     }
 }
