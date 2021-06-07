@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff204aade70cff4bb1c0132ea9b11eb, type: 3}
+  m_Name: CheckAllElementsPicked
+  m_EditorClassIdentifier: 
+  d1: {fileID: 11400000, guid: 60633b93c7c0d2a4fadab397bd4d6947, type: 2}
+  d2: {fileID: 11400000, guid: c18397a30c33c9c4d82f93476f9b817b, type: 2}

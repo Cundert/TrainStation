@@ -30,6 +30,7 @@ public class TicketValidator : MonoBehaviour
     public void TicketValidated()
     {
         FSMgate.customFlag = true; // El custom flag indica que  el ticket ha sido validado.
+        TaskHandler.instance.flags[3] = true;
     }
     public void OnTriggerEnter(Collider other)
     {
