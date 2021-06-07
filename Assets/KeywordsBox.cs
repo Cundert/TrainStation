@@ -19,6 +19,7 @@ public class KeywordsBox : MonoBehaviour
         KeywordsBox.instance = this;
         t = GetComponentInChildren<TMP_Text>();
         wordsToBeDisplayed = new List<string>();
+        TurnXKeyWordDisplay(false);
     }
 
     public void updateCurrentKeywords(WordOR[] array)

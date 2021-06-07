@@ -25,7 +25,7 @@ public class ConversationText : MonoBehaviour
     public void StoreSentence(bool user, string text)
     {
         writer = new StreamWriter(path, true);
-        writer.WriteLine(user.ToString() + ',' + text + Time.time.ToString().Replace(",", "."));
+        writer.WriteLine(user.ToString() + ',' + text + ',' + Time.time.ToString().Replace(",", "."));
         writer.Close();
     }
 }
