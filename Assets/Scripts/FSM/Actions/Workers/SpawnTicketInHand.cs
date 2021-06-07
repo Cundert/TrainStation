@@ -9,6 +9,6 @@ public class SpawnTicketInHand : FSMaction
     // Start is called before the first frame update
     public override void Act(FSMcontroller controller)
     {
-        controller.GetComponent<Interaction>().SpawnTicketInUserHand();
+        controller.GetComponent<TicketValidator>().SpawnTicketInUserHand();
     }
 }

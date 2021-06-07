@@ -9,11 +9,6 @@ public class Interaction : MonoBehaviour
     public int lastLocation;
     public bool greeted;
     public GameObject spawnableObject;
-    public FSMcontroller FSMgate;
-
-    public GameObject userRightHand;
-    public GameObject ticketSpawned;
-    public GameObject ticketToBeGiven;
 
     float greetedTimer;
 
@@ -44,16 +39,6 @@ public class Interaction : MonoBehaviour
         StartCoroutine("lookAtCoroutine",q);
     }
 
-    public void SpawnTicketInUserHand()
-    {
-        ticketSpawned = Instantiate(ticketToBeGiven, userRightHand.transform);
-        ticketSpawned.transform.position = userRightHand.transform.position;
-    }
-
-    public void TicketValidated()
-    {
-        FSMgate.customFlag = true; // El custom flag indica que  el ticket ha sido validado.
-    }
 
     IEnumerator lookAtCoroutine(Quaternion q)
     {
@@ -127,14 +112,6 @@ public class Interaction : MonoBehaviour
         else
         {
             audioSource.PlayOneShot(male[random]);
-        }
-    }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.name.Contains("SimpleTicket"))
-        {
-            GetComponent<FSMcontroller>().customFlag = true; // El custom flag indica que ha recibido el ticket.
-            Destroy(other.gameObject);
         }
     }
 }
