@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: NoCoffeeEnding
   m_EditorClassIdentifier: 
   isStayState: 0
-  stayState: {fileID: 0}
+  stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
   onEnterActions:
   - {fileID: 11400000, guid: 193d51c28d157af4bba423c4f4e0af56, type: 2}
+  - {fileID: 11400000, guid: ce72f56ed6943ea4db2fb073d3fe5b60, type: 2}
   constantActions: []
   transitions:
   - {fileID: 11400000, guid: b5476bfb158088745932b23a94bbf477, type: 2}

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 3-NoCoffeeAnalyze
   m_EditorClassIdentifier: 
   isStayState: 0
-  stayState: {fileID: 0}
+  stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
   onEnterActions:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: af6078b39648d9348898f87da4f48156, type: 2}
   - {fileID: 11400000, guid: b08d173437bc5574da5d4386f1124828, type: 2}
   - {fileID: 11400000, guid: 8fe9cc2edb1507e429828d3ac509c271, type: 2}
   constantActions: []
