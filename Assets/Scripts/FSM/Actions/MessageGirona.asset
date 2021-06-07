@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MessageGirona
   m_EditorClassIdentifier: 
   condition: {fileID: 0}
-  message: Compra un ticket a Girona.
+  message: Compra un ticket a Girona
   duration: 5

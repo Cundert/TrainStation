@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50cee1bf012004f4fbbecaaa29289a22, type: 3}
-  m_Name: MessageCoffee
+  m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
+  m_Name: BackTo2Third
   m_EditorClassIdentifier: 
-  condition: {fileID: 0}
-  message: "Compra un caf\xE9"
-  duration: 5
+  decision: {fileID: 11400000, guid: 148bb2c1ee0ed684da2d48c7adc6b405, type: 2}
+  destinationState: {fileID: 11400000, guid: 884faf8a7f5afef42904df95b4009176, type: 2}

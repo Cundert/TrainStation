@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   condition: {fileID: 0}
   arrayOfWordLists:
-  - {fileID: 11400000, guid: 555f7b38049045b48b5c87afdfe22d62, type: 2}
   - {fileID: 11400000, guid: d640fa0592919544eb9c714c038ebb6a, type: 2}
+  - {fileID: 11400000, guid: 555f7b38049045b48b5c87afdfe22d62, type: 2}
   - {fileID: 11400000, guid: 38e06453ee7ac5c4493d408bb4eb2ca0, type: 2}
   - {fileID: 11400000, guid: fa0165d6a7198b74f8ee1a981a330927, type: 2}

@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ff0d53392c85644b9c926fdcd5de31, type: 3}
-  m_Name: AskingValidation
+  m_Script: {fileID: 11500000, guid: 09ef69766da8c314d9527e15164ebf7a, type: 3}
+  m_Name: AskingTicketValidation
   m_EditorClassIdentifier: 
-  words:
-  - validar
-  - valida
-  - acredita
+  d1: {fileID: 11400000, guid: d640fa0592919544eb9c714c038ebb6a, type: 2}
+  d2: {fileID: 11400000, guid: 38e06453ee7ac5c4493d408bb4eb2ca0, type: 2}

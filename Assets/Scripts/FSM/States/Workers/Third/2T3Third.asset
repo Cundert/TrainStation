@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b414d63a905ba254fa5043935afd7143, type: 3}
-  m_Name: 3-ThirdWaitingTicket
+  m_Name: 2T3Third
   m_EditorClassIdentifier: 
   isStayState: 0
-  stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
+  stayState: {fileID: 0}
   onEnterActions:
-  - {fileID: 11400000, guid: 082f8a43ed04ce94cb24d48ad9b83f6f, type: 2}
-  - {fileID: 11400000, guid: 10d0419270da86e46b156e12258de5e7, type: 2}
-  - {fileID: 11400000, guid: ce72f56ed6943ea4db2fb073d3fe5b60, type: 2}
+  - {fileID: 11400000, guid: 0c2e46dc463e05249b898f14e5b0edbd, type: 2}
+  - {fileID: 11400000, guid: e68a2669778f9f74ca13ff7e9edddf66, type: 2}
+  - {fileID: 11400000, guid: 8fe9cc2edb1507e429828d3ac509c271, type: 2}
   constantActions: []
   transitions:
-  - {fileID: 11400000, guid: a364020813ba6cc4eaa55ad2b2e7912b, type: 2}
+  - {fileID: 11400000, guid: fe39884758c9bca4b9fee8885a65d59e, type: 2}
+  - {fileID: 11400000, guid: 3c11b70d103a8504f8a332a7c5bc529e, type: 2}

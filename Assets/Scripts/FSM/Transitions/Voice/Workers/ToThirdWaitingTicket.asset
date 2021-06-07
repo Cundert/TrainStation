@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ToThirdWaitingTicket
   m_EditorClassIdentifier: 
   decision: {fileID: 11400000, guid: 017f223966487e84eb4f87809c6fc09b, type: 2}
-  destinationState: {fileID: 11400000, guid: 841aea4d3e81cf74fa88e4814444d0b1, type: 2}
+  destinationState: {fileID: 11400000, guid: 4852466636e7c2242bf54cd03e649445, type: 2}

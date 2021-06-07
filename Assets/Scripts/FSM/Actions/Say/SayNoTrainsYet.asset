@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 402af236235cb0541aeb565707540339, type: 3}
-  m_Name: ValidarBillete
+  m_Name: SayNoTrainsYet
   m_EditorClassIdentifier: 
-  condition: {fileID: 11400000, guid: 6b90fc260da93a94d9132c9aa5897d1b, type: 2}
-  audioF: {fileID: 8300000, guid: 482a4a127b898d24d9760cc92c45441b, type: 3}
-  audioM: {fileID: 8300000, guid: 4a979574931cd5047a84c562661c7e32, type: 3}
+  condition: {fileID: 11400000, guid: 1f0c00ba11122b2449e6288cf4fb77b7, type: 2}
+  audioF: {fileID: 8300000, guid: 540bbc5ca9844864e87592da00b059c1, type: 3}
+  audioM: {fileID: 8300000, guid: 0ab7f7db17f3b7948a809f685580578a, type: 3}
