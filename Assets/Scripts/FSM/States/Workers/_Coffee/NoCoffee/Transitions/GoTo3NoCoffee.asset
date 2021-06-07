@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ff0d53392c85644b9c926fdcd5de31, type: 3}
-  m_Name: Despidiendose
+  m_Script: {fileID: 11500000, guid: dbe14cf8b75190a4894e522c69d4ce97, type: 3}
+  m_Name: GoTo3NoCoffee
   m_EditorClassIdentifier: 
-  words:
-  - adios
-  - nos vemos
-  - chao
-  - deu
-  - "adi\xF3s"
-  - gracias
-  - hasta luego
+  decision: {fileID: 11400000, guid: 017f223966487e84eb4f87809c6fc09b, type: 2}
+  destinationState: {fileID: 11400000, guid: d09c441ab1b0ac54280bbf6cc74a5e22, type: 2}

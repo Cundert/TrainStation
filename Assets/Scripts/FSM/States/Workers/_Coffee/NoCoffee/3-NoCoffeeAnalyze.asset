@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b414d63a905ba254fa5043935afd7143, type: 3}
-  m_Name: 2T3Coffee
+  m_Name: 3-NoCoffeeAnalyze
   m_EditorClassIdentifier: 
   isStayState: 0
-  stayState: {fileID: 11400000, guid: 727d0bc6ab9e6f347b60b6ddbcc34e50, type: 2}
+  stayState: {fileID: 0}
   onEnterActions:
-  - {fileID: 11400000, guid: abcb06a678b9d844d897210482d7453d, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: b08d173437bc5574da5d4386f1124828, type: 2}
   - {fileID: 11400000, guid: 8fe9cc2edb1507e429828d3ac509c271, type: 2}
   constantActions: []
   transitions:
-  - {fileID: 11400000, guid: 3c301ba52bc7e614aba5c5f008ce3df8, type: 2}
-  - {fileID: 11400000, guid: fb3676ef1b27e9d44babd0f4232e45bc, type: 2}
-  - {fileID: 11400000, guid: ce88fb46e63ea864ea75e11f40a28bec, type: 2}
+  - {fileID: 11400000, guid: 9a2d58811be0b444f968486e8268f99c, type: 2}
+  - {fileID: 11400000, guid: f117647197a494b44a091320cdd65ff1, type: 2}
