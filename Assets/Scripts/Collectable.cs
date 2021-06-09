@@ -12,6 +12,7 @@ public class Collectable : Interactuable, IInteractable
 
 	public void Interact() {
 		if (flagID>=0) TaskHandler.instance.flags[flagID]=true;
+		TasksData.instance.UpdateTasks(flagID);
 		//transform.parent.gameObject.GetComponent<Dispenser>().DelayedMakeInteractuable(0.5f);
 		Destroy(gameObject);
 	}
