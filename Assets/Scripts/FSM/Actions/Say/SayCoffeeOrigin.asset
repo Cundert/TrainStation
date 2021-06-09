@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: 148bb2c1ee0ed684da2d48c7adc6b405, type: 2}
   audioF: {fileID: 8300000, guid: 44019c0b0dcb79b438099ecbe7f7549c, type: 3}
   audioM: {fileID: 8300000, guid: df1fe360b546aa04f94908419cfd4735, type: 3}
+  text: "Ese es un lugar interesante, \xBFy de donde vienes?"

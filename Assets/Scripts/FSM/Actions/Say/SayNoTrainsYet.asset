@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: 1f0c00ba11122b2449e6288cf4fb77b7, type: 2}
   audioF: {fileID: 8300000, guid: 540bbc5ca9844864e87592da00b059c1, type: 3}
   audioM: {fileID: 8300000, guid: 0ab7f7db17f3b7948a809f685580578a, type: 3}
+  text: Ahora mismo no hay trenes que vayan a salir, vuelve mas tarde.

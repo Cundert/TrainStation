@@ -15,3 +15,6 @@ MonoBehaviour:
   condition: {fileID: 0}
   audioF: {fileID: 8300000, guid: 50e0e0fc716a9b24fb7b558a4f739411, type: 3}
   audioM: {fileID: 8300000, guid: 107d88dab94b38a4eba5856b2dbeb7a5, type: 3}
+  text: Bien, aqui tiene su billete, recuerde que el tren a Girona saldra en una
+    hora, tiene usted que ir al anden numero 1 y ahi le validaran su billete. Adios,
+    y buen viaje.

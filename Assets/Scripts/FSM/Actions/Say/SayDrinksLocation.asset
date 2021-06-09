@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: fa0165d6a7198b74f8ee1a981a330927, type: 2}
   audioF: {fileID: 8300000, guid: d4f360ee4c4ed2945aadb8086d7ad7b2, type: 3}
   audioM: {fileID: 8300000, guid: 3d013e75b2e35cf4399f37dd58aae627, type: 3}
+  text: Hay un bar en el lado derecho de la estacion llamado Gastro Hub

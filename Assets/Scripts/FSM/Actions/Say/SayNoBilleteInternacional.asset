@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: 6180aad074f15bc49b4e47c86162ce29, type: 2}
   audioF: {fileID: 8300000, guid: 89d1787e06423b74786dcf75d81a0aaa, type: 3}
   audioM: {fileID: 8300000, guid: 3960ef66b907e5e4d8eee485d047e301, type: 3}
+  text: "Lo siento, no vendo billetes a ese destino. Pregunta a mis compa\xF1eros."

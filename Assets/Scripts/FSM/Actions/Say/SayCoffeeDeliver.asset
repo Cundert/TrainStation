@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: 148bb2c1ee0ed684da2d48c7adc6b405, type: 2}
   audioF: {fileID: 8300000, guid: 40875bfb4e9e72246b6b5fcbc053146a, type: 3}
   audioM: {fileID: 8300000, guid: 67a36b1998014c449acd0fb47551247e, type: 3}
+  text: Ya veo. Bueno, su cafe ya esta listo, disfrutelo, y buen viaje.

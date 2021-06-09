@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: fa0165d6a7198b74f8ee1a981a330927, type: 2}
   audioF: {fileID: 8300000, guid: a0379004df36c6d49aa2a7a984270d3a, type: 3}
   audioM: {fileID: 8300000, guid: 50508b88779792c458de062803b188c9, type: 3}
+  text: Lo siento, no tenemos cafe ahora mismo.

@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 0}
   audioF: {fileID: 8300000, guid: 5de1ddf6d4f03174aa0859b67dd37fd7, type: 3}
   audioM: {fileID: 8300000, guid: 5744612b2dc5b0e4dac95d22b32a18d8, type: 3}
+  text: De acuerdo, deme su nombre y le emitire el billete a Paris

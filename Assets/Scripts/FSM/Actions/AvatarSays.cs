@@ -7,6 +7,7 @@ using UnityEngine;
 public class AvatarSays : FSMaction
 {
     public AudioClip audioF, audioM;
+    public string text;
     public override void Act(FSMcontroller controller)
     {
         if (VoiceRecognizer.instance.startedAnalysis)
@@ -15,6 +16,7 @@ public class AvatarSays : FSMaction
             {
                 controller.GetComponent<Interaction>().Say(audioF, audioM);
                 VoiceRecognizer.instance.startedAnalysis = false;
+                ConversationText.instance.StoreSentence(false, text);
             }
         }
     }

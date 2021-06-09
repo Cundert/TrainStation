@@ -17,7 +17,7 @@ public class ConversationText : MonoBehaviour
 
         path = ManageCollectors.instance.pathForCurrentIteration() + "/ConversationText.csv";
         writer = new StreamWriter(path, true);
-        writer.WriteLine("IsUser, Sentence, Timestamp");
+        writer.WriteLine("WhoSpeaks, Sentence, Timestamp");
         writer.Close();
         print(path);
     }
@@ -25,7 +25,11 @@ public class ConversationText : MonoBehaviour
     public void StoreSentence(bool user, string text)
     {
         writer = new StreamWriter(path, true);
-        writer.WriteLine(user.ToString() + ',' + text + ',' + Time.time.ToString().Replace(",", "."));
+        
+        if (user) writer.Write("USER");
+        else writer.Write("AVATAR");
+        text = text.Replace(",", ";");
+        writer.WriteLine(',' + text + ',' + Time.time.ToString().Replace(",", "."));
         writer.Close();
     }
 }

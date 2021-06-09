@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: b0eff1f6b47e0084381d4e2eb8eb213a, type: 2}
   audioF: {fileID: 8300000, guid: 02a061c9305e3dc4589f61a73242c407, type: 3}
   audioM: {fileID: 8300000, guid: 2a2641aa0f7a629419fc2344faa0bc30, type: 3}
+  text: El puesto de carga de moviles esta en el lado derecho de la estacion.

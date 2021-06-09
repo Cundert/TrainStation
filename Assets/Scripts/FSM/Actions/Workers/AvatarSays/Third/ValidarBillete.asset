@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: 6b90fc260da93a94d9132c9aa5897d1b, type: 2}
   audioF: {fileID: 8300000, guid: 482a4a127b898d24d9760cc92c45441b, type: 3}
   audioM: {fileID: 8300000, guid: 4a979574931cd5047a84c562661c7e32, type: 3}
+  text: "Vale, aqui puede validar su billete, \xBFme lo puede ense\xF1ar por favor?"

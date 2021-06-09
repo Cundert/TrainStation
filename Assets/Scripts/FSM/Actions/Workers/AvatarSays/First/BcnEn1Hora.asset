@@ -15,3 +15,5 @@ MonoBehaviour:
   condition: {fileID: 0}
   audioF: {fileID: 8300000, guid: e1d8ee365453fba4280253d300cea84d, type: 3}
   audioM: {fileID: 8300000, guid: eddddadb3a4f9c943a8cc79231e8da13, type: 3}
+  text: "De acuerdo, el tren a Girona saldr\xE1 en una hora, espere un momento, en
+    seguida le emito el billete."

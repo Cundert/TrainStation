@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c3a00c9ef00499b4ca86d4bd82a40e72, type: 3}
   - {fileID: 8300000, guid: b47dc8c3e3c45dc4ba3e0cbe90303c15, type: 3}
   - {fileID: 8300000, guid: b47dc8c3e3c45dc4ba3e0cbe90303c15, type: 3}
+  text: "Hola, \xBFcomo te puedo ayudar?"

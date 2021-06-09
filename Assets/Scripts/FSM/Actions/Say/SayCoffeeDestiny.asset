@@ -15,3 +15,5 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: fa0165d6a7198b74f8ee1a981a330927, type: 2}
   audioF: {fileID: 8300000, guid: 8e2c73a400d4ebd478f7bfd183e952e4, type: 3}
   audioM: {fileID: 8300000, guid: 72af728f2799c4e44998d1206799dac2, type: 3}
+  text: "Por supuesto, en seguida le preparamos un cafe, por cierto, \xBFa donde
+    viajas?"

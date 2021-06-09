@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 0}
   audioF: {fileID: 8300000, guid: 1118b3392de94df49a107fa4331cfdf7, type: 3}
   audioM: {fileID: 8300000, guid: 97b39c9e60585994b94146a6b01fac88, type: 3}
+  text: El trayecto Barcelona-Girona es para hoy?

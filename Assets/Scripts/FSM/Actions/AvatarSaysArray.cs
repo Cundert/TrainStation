@@ -8,6 +8,8 @@ public class AvatarSaysArray : FSMaction
 {
     public AudioClip[] audioF;
     public AudioClip[] audioM;
+    public string text;
+
     public override void Act(FSMcontroller controller)
     {
         if (VoiceRecognizer.instance.startedAnalysis)
@@ -16,6 +18,7 @@ public class AvatarSaysArray : FSMaction
             {
                 controller.GetComponent<Interaction>().Say(audioF, audioM);
                 VoiceRecognizer.instance.startedAnalysis = false;
+                ConversationText.instance.StoreSentence(false, text);
             }
         }
     }

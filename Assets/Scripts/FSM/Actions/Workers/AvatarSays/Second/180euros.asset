@@ -15,3 +15,4 @@ MonoBehaviour:
   condition: {fileID: 0}
   audioF: {fileID: 8300000, guid: 2c9806b318965434f953c9a4eb7d17c6, type: 3}
   audioM: {fileID: 8300000, guid: 2a39bf3fe1232544b8e82bb8225e21df, type: 3}
+  text: "De acuerdo, son 180\u20AC, \xBFquiere pagar con tarjeta o en efectivo?"
