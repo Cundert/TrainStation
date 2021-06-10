@@ -20,6 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8ba5c967bc30b142b06b3cf4d62f8f7, type: 2}
   - {fileID: 11400000, guid: 7adb5f0bba0593443b790a9fc725e332, type: 2}
   - {fileID: 11400000, guid: d0a173c5483236c40b5da20b04495398, type: 2}
+  - {fileID: 11400000, guid: f7ed2eb092d40bc49b542ddd561edbdc, type: 2}
   constantActions: []
   transitions:
   - {fileID: 11400000, guid: 1a8592d3af957ac49b0a1847f96d1d5d, type: 2}

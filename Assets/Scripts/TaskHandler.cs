@@ -8,7 +8,7 @@ public class TaskHandler : MonoBehaviour
 	public static TaskHandler instance;
 	public bool[] flags;
 
-    public void Start()
+    public void Awake()
     {
 		if (TaskHandler.instance) Destroy(gameObject);
 		TaskHandler.instance=this;
