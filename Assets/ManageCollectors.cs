@@ -17,7 +17,10 @@ public class ManageCollectors : MonoBehaviour
         if (ManageCollectors.instance) Destroy(this);
         ManageCollectors.instance = this;
         int highestDireNum = 0;
-        
+
+        if (!Directory.Exists(iniPath)){
+            Directory.CreateDirectory(iniPath);
+        }
         folders = Directory.GetDirectories(iniPath);
         foreach (string currentFolder in folders)
         {

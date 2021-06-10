@@ -19,7 +19,6 @@ public class ConversationText : MonoBehaviour
         writer = new StreamWriter(path, true);
         writer.WriteLine("WhoSpeaks, Sentence, Timestamp");
         writer.Close();
-        print(path);
     }
 
     public void StoreSentence(bool user, string text)

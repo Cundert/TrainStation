@@ -13,7 +13,7 @@ public class KeywordsBox : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (KeywordsBox.instance) Destroy(this);
         KeywordsBox.instance = this;
