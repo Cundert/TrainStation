@@ -22,7 +22,7 @@ public class AssistanceData : MonoBehaviour
         writer.WriteLine(assistUser);
         writer.Close();
 
-        TaskHandler.instance.gameObject.SetActive(assistUser);
-        KeywordsBox.instance.gameObject.SetActive(assistUser);
+        MessageVR.instance.transform.parent.gameObject.SetActive(assistUser);
+        KeywordsBox.instance.transform.parent.gameObject.SetActive(assistUser);
     }
 }
