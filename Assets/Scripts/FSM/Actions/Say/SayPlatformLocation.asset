@@ -15,4 +15,4 @@ MonoBehaviour:
   condition: {fileID: 11400000, guid: a52f3f0df6794ba44a8aa0556ca32117, type: 2}
   audioF: {fileID: 8300000, guid: 21dc011b01d585e4a94ad8575ee86958, type: 3}
   audioM: {fileID: 8300000, guid: 3791e7f3284e1b544b3b95e4029aa33a, type: 3}
-  text: L
+  text: Los andenes estan al fondo de la estacion
